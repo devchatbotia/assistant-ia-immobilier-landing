@@ -998,12 +998,133 @@
         .hidden {
             display: none !important;
         }
+
+        /* ===== Nouveaux styles pour la section configuration ===== */
+        .config-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-main);
+            padding: 48px 40px;
+            box-shadow: var(--shadow-card);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .config-progress {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .config-progress .badge-light {
+            background: var(--bg-soft);
+            color: var(--accent-primary);
+            border: 1px solid var(--border-light);
+            border-radius: 999px;
+            padding: 8px 18px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .question-counter {
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .config-question h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: var(--text-primary);
+        }
+
+        .config-options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .config-option {
+            background: var(--bg-soft);
+            border: 2px solid transparent;
+            border-radius: 999px;
+            padding: 16px 24px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .config-option:hover {
+            border-color: var(--accent-glow);
+            background: white;
+            transform: translateX(5px);
+        }
+
+        .config-option.selected {
+            border-color: var(--accent-primary);
+            background: white;
+            box-shadow: 0 5px 15px rgba(26,42,39,0.1);
+        }
+
+        .config-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-light);
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .config-stats {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .config-stats i {
+            color: var(--accent-glow);
+            margin-right: 5px;
+        }
+
+        .config-stats .fa-lock {
+            color: var(--muted);
+        }
+
+        .config-badge-success {
+            background: rgba(30,126,75,0.1);
+            color: var(--success);
+            border-radius: 999px;
+            padding: 5px 12px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        @media (max-width: 640px) {
+            .config-card { padding: 30px 20px; }
+            .config-question h3 { font-size: 1.5rem; }
+            .config-option { padding: 12px 18px; font-size: 1rem; }
+        }
     </style>
 </head>
 <body class="no-js">
     <!-- H1 invisible SEO supprimé -->
 
-    <!-- NAVBAR inchangée -->
+    <!-- NAVBAR inchangée sauf le texte du bouton Activer -->
     <div class="navbar-wrapper">
         <div class="container">
             <nav class="navbar" id="navbar">
@@ -1012,7 +1133,8 @@
                     <a href="#solution">Solution</a>
                     <a href="#comment">Comment ça marche</a>
                     <a href="#offre">Offre</a>
-                    <a href="#offre" class="btn-secondary">Activer</a>
+                    <!-- MODIFICATION : "Activer" devient "Activer l'assistant" -->
+                    <a href="#offre" class="btn-secondary">Activer l'assistant</a>
                 </div>
             </nav>
         </div>
@@ -1037,11 +1159,12 @@
                         <span style="display: flex; align-items: center; gap: 6px; font-size: 0.95rem; color: var(--text-secondary);"><i class="fas fa-check-circle" style="color: var(--accent-primary);"></i> Technologie propriétaire</span>
                     </div>
                     <div style="margin: 20px 0 10px;">
-                        <!-- Lien Stripe à personnaliser (gardé placeholder) -->
-                        <a href="https://buy.stripe.com/test_immobilier" class="btn-stripe" target="_blank" rel="noopener" aria-label="Activer mon assistant IA immobilier">
-                           Activer mon assistant IA immobilier <i class="fas fa-arrow-right"></i>
+                        <!-- 🔥 BOUTON PRINCIPAL : CONFIGURATEUR sans flamme, texte premium -->
+                        <a href="https://config.devchatbotia.app/" class="btn-stripe" target="_blank" rel="noopener">
+                           Configurer mon assistant IA immobilier <i class="fas fa-arrow-right"></i>
                         </a>
-                        <p style="font-size:1rem; font-weight:500; margin-top:5px;">49€/mois – sans engagement</p>
+                        <!-- MODIFICATION : clarification du tarif -->
+                        <p style="font-size:1rem; font-weight:500; margin-top:5px;">Configuration gratuite · 49€/mois ensuite · sans engagement</p>
                         <p style="font-size:0.9rem; color: var(--muted); margin-top:12px;">
                             🔒 Paiement sécurisé Stripe · Activation rapide
                         </p>
@@ -1354,7 +1477,8 @@
                         </p>
                     </div>
 
-                    <a href="https://buy.stripe.com/test_immobilier" class="btn-stripe" style="margin-top: 30px; width: 100%;" target="_blank" rel="noopener">
+                    <!-- BOUTON STRIPE (ACHAT DIRECT) AVEC TEXTE CLARIFIÉ -->
+                    <a href="https://buy.stripe.com/9B67sL5733aR02tfm89AA01" class="btn-stripe" style="margin-top: 30px; width: 100%;" target="_blank" rel="noopener">
                         Activer mon assistant IA immobilier <i class="fas fa-arrow-right"></i>
                     </a>
                     <p style="font-size:0.85rem; color: var(--muted); margin-top: 20px;">
@@ -1367,8 +1491,60 @@
             <div style="text-align: center; margin-top: 40px;">
                 <p style="color: var(--text-secondary);">Pour des besoins avancés (multi-agences, CRM dédié) : <a href="https://devchatbotia.com" style="color: var(--accent-primary); font-weight: 600;">Découvrez nos offres complètes →</a></p>
             </div>
+        </div>
+    </section>
 
-            <!-- FAQ IMMOBILIÈRE -->
+    <!-- ===== NOUVELLE SECTION : CONFIGURATION DE L'AGENT IA ===== -->
+    <section class="section" id="configuration">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 40px;">
+                <div class="badge" style="margin: 0 auto;">⚡ Configuration intelligente — 60 secondes</div>
+                <h2>Configuration de votre Agent IA Autonome™</h2>
+                <p class="lead" style="margin: 0 auto;">Répondez à 9 questions simples pour personnaliser votre assistant.</p>
+            </div>
+
+            <div class="config-card">
+                <!-- En-tête avec progression et badge "Agent IA actif" -->
+                <div class="config-progress">
+                    <span class="badge-light"><i class="fas fa-brain" style="margin-right: 6px;"></i>🧠 Agent IA actif</span>
+                    <span class="question-counter">Question 1 sur 9 <span style="color: var(--text-secondary); font-weight: 400;"></span></span>
+                </div>
+
+                <!-- Question et options (première question d'exemple) -->
+                <div class="config-question">
+                    <h3>Quel est votre principal objectif avec cet agent IA ?</h3>
+                    <div class="config-options">
+                        <div class="config-option" onclick="this.classList.toggle('selected')">🔍 Qualifier les acheteurs</div>
+                        <div class="config-option" onclick="this.classList.toggle('selected')">🏠 Capturer des mandats de vente</div>
+                        <div class="config-option" onclick="this.classList.toggle('selected')">📅 Planifier des visites</div>
+                        <div class="config-option" onclick="this.classList.toggle('selected')">💬 Répondre aux questions sur les biens</div>
+                    </div>
+                </div>
+
+                <!-- Pied de page avec statistiques et badge de confiance -->
+                <div class="config-footer">
+                    <div class="config-stats">
+                        <span><i class="fas fa-comment-dots"></i> +1 000 conversations</span>
+                        <span class="config-badge-success"><i class="fas fa-lock"></i> 🔐 Vos données confidentielles</span>
+                    </div>
+                    <a href="https://config.devchatbotia.app/" class="btn-stripe" style="margin: 0;" target="_blank" rel="noopener">
+                        Continuer la configuration <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Note d'information supplémentaire -->
+            <p style="text-align: center; color: var(--text-secondary); margin-top: 30px; font-size: 0.95rem;">
+                <i class="fas fa-robot" style="color: var(--accent-glow); margin-right: 6px;"></i> 
+                Configuration intelligente — vos réponses adaptent l'agent à votre activité immobilière.
+            </p>
+        </div>
+    </section>
+    <!-- ===== FIN SECTION CONFIGURATION ===== -->
+
+    <!-- FAQ IMMOBILIÈRE -->
+    <section class="section">
+        <div class="container">
             <div id="faq" class="faq-grid">
                 <div class="faq-item">
                     <h4>Est-ce compliqué à installer sur mon site ?</h4>
@@ -1404,11 +1580,11 @@
                 </div>
             </div>
 
-            <!-- CTA FINAL -->
+            <!-- CTA FINAL (STRIPE LIVE) -->
             <div class="cta-section">
                 <h3>Ne laissez plus votre trafic immobilier repartir sans résultat</h3>
                 <p>Activez votre assistant IA immobilier et commencez à générer davantage de prospects qualifiés dès aujourd'hui.</p>
-                <a href="https://buy.stripe.com/test_immobilier" class="btn-stripe" style="padding: 20px 50px; font-size: 1.2rem;" target="_blank" rel="noopener">
+                <a href="https://buy.stripe.com/9B67sL5733aR02tfm89AA01" class="btn-stripe" style="padding: 20px 50px; font-size: 1.2rem;" target="_blank" rel="noopener">
                     Activer mon assistant IA immobilier <i class="fas fa-arrow-right"></i>
                 </a>
                 <p style="margin-top: 25px; font-size: 0.95rem; color: var(--muted);">🔒 Paiement sécurisé Stripe · Sans engagement · Activation rapide</p>
@@ -1446,9 +1622,9 @@
         </div>
     </footer>
 
-    <!-- Sticky CTA mobile -->
+    <!-- Sticky CTA mobile (STRIPE LIVE) -->
     <div class="sticky-cta">
-        <a href="https://buy.stripe.com/test_immobilier" class="btn-stripe" target="_blank" rel="noopener">
+        <a href="https://buy.stripe.com/9B67sL5733aR02tfm89AA01" class="btn-stripe" target="_blank" rel="noopener">
            Activer mon assistant IA immobilier
         </a>
     </div>
@@ -1558,5 +1734,10 @@
             }, delay + 1000); // 1 seconde supplémentaire pour que l'utilisateur lise le dernier message
         })();
     </script>
+
+    <!-- ========== INTÉGRATION DE L'AGENT IA ========== -->
+    <!-- Remplacez l'URL ci-dessous par le lien réel de votre script -->
+    <script src="https://devchatbotia.com/chat.js?site=immo" async></script>
+    <!-- ============================================== -->
 </body>
 </html>
