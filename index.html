@@ -116,6 +116,9 @@
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            /* ✅ Safe areas globales (iPhone/Android) */
+            padding-left: env(safe-area-inset-left);
+            padding-right: env(safe-area-inset-right);
         }
 
         .container {
@@ -947,20 +950,24 @@
                 display: flex;
                 justify-content: center;
                 position: fixed;
-                bottom: 22px;
                 left: 50%;
                 transform: translateX(-50%);
+                bottom: calc(22px + env(safe-area-inset-bottom));
                 z-index: 2000;
                 padding: 0 16px;
             }
             .sticky-cta .btn-stripe {
                 width: 100%;
-                max-width: 420px;
+                max-width: 92vw;
                 box-shadow: 0 14px 34px rgba(0,0,0,0.15);
                 margin: 0;
+                padding: 12px 24px !important;
+                font-size: 15px !important;
+                height: 48px !important;
             }
-            body { padding-bottom: 110px !important; }
-            .sticky-cta .btn-stripe { padding: 12px 24px !important; font-size: 15px !important; height: 48px !important; }
+            body {
+                padding-bottom: calc(110px + env(safe-area-inset-bottom)) !important;
+            }
             .section { padding: 50px 0 !important; }
             .hero { padding: 10px 0 30px !important; }
             .footer { padding: 40px 0 20px !important; margin-top: 40px !important; }
@@ -1120,20 +1127,35 @@
             .config-option { padding: 12px 18px; font-size: 1rem; }
         }
 
-        /* ===== FIX BOUTON HERO MOBILE — ANTI COUPURE ===== */
+        /* ===== CORRECTIONS MOBILES (ANTI-RÉGRESSION) ===== */
+
+        /* 2) Menu haut : padding et scroll horizontal si nécessaire */
         @media (max-width: 768px) {
-            .hero,
-            .hero-section,
-            #hero {
-                padding-bottom: calc(120px + env(safe-area-inset-bottom)) !important;
+            .navbar {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                white-space: nowrap;
+                display: block;
+                padding-left: 12px;
+                padding-right: 12px;
             }
-            .hero .btn,
-            .hero button,
-            .hero .btn-stripe,
-            .hero a[class*="btn"] {
-                margin-bottom: 20px !important;
+            .nav-links {
+                display: inline-flex;
+                flex-wrap: nowrap;
+                gap: 20px;
             }
         }
+
+        /* 3) Cartes : padding et marges adaptés */
+        @media (max-width: 768px) {
+            .card,
+            .faq-item {
+                padding: 18px 16px;
+                margin: 12px;
+            }
+        }
+
+        /* ===== FIN CORRECTIONS ===== */
     </style>
 </head>
 <body class="no-js">
@@ -1563,7 +1585,8 @@
             <div id="faq" class="faq-grid">
                 <div class="faq-item">
                     <h4>Est-ce compliqué à installer sur mon site ?</h4>
-                    <p>Non. Nous vous fournissons un simple script à ajouter à votre site ou un lien direct. Aucune compétence technique requise.</p>
+                    <!-- ✅ CORRECTION COPYWRITING : version premium -->
+                    <p>Non. Nous déployons votre assistant IA sur votre site ou via un lien sécurisé dédié. La mise en service est rapide et entièrement accompagnée, sans compétence technique requise.</p>
                 </div>
                 <div class="faq-item">
                     <h4>L'assistant connaît-il mes biens disponibles ?</h4>
