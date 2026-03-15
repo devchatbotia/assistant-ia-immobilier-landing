@@ -973,6 +973,15 @@
             .footer { padding: 40px 0 20px !important; margin-top: 40px !important; }
         }
 
+        /* Micro-optimisation pour très petits écrans (≤360px) */
+        @media (max-width: 360px) {
+            .sticky-cta .btn-stripe {
+                font-size: 14px !important;
+                padding: 10px 18px !important;
+                height: 44px !important;
+            }
+        }
+
         @media (min-width: 1025px) {
             .section { padding: 55px 0 !important; }
         }
