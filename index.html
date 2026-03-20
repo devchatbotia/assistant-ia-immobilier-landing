@@ -3,14 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- theme-color mobile -->
     <meta name="theme-color" content="#1a2a27">
-    <!-- Meta description enrichie immobilier -->
     <meta name="description" content="Assistant IA immobilier : convertissez vos visiteurs en prospects qualifiés 24h/24. Idéal pour agences, mandataires, annonces. 49€/mois sans engagement.">
-    <!-- Meta keywords supprimée (inutile) -->
     <link rel="canonical" href="https://immobilier.devchatbotia.app/">
     <meta name="robots" content="index, follow">
-    <!-- Open Graph immobilier -->
     <meta property="og:title" content="Assistant IA immobilier – DevChatbotIA®">
     <meta property="og:description" content="Un assistant IA qui engage vos visiteurs et génère des prospects qualifiés pour vos mandats, 24h/24. 49€/mois sans engagement.">
     <meta property="og:url" content="https://immobilier.devchatbotia.app/">
@@ -20,18 +16,14 @@
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://immobilier.devchatbotia.app/preview-immo.jpg">
-    <!-- Mise à jour og:site_name avec la marque principale (optionnel) -->
     <meta property="og:site_name" content="DevChatbotIA®">
     <meta name="author" content="DevChatbotIA®">
-    <!-- Titre amélioré : "convertissez votre trafic" au lieu de "générez plus" -->
-    <title>Assistant IA immobilier — convertissez votre trafic en prospects qualifiés | DevChatbotIA®</title>
+    <title>Assistant IA immobilier — transformez vos visiteurs en prospects qualifiés 24/7 | DevChatbotIA®</title>
 
-    <!-- ===== FAVICON : AUCUNE ICÔNE ===== -->
     <link rel="icon" href="data:,">
     <link rel="shortcut icon" href="data:,">
     <link rel="apple-touch-icon" href="data:,">
 
-    <!-- Schema.org Organization -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -46,7 +38,6 @@
     }
     </script>
 
-    <!-- Schema Product adapté immobilier avec ajout de l'URL -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -58,6 +49,11 @@
         "@type": "Brand",
         "name": "DevChatbotIA"
       },
+      "category": "BusinessSoftware",
+      "audience": {
+        "@type": "Audience",
+        "audienceType": "RealEstateAgent"
+      },
       "offers": {
         "@type": "Offer",
         "price": "49",
@@ -67,7 +63,6 @@
     }
     </script>
 
-    <!-- Google Fonts & Font Awesome (identique) -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -83,9 +78,9 @@
             --text-primary: #1c1c1e;
             --text-secondary: #6b6b70;
             --muted: #8e8e96;
-            --accent-primary: #1a2a27;     /* vert profond */
+            --accent-primary: #1a2a27;
             --accent-secondary: #2c3e3a;    
-            --accent-glow: #b89e6f;          /* or doux */
+            --accent-glow: #b89e6f;
             --success: #1e7e4b;
             --border-light: #e8e4de;
             --border-hard: #d4ccc4;
@@ -117,7 +112,6 @@
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-            /* ✅ Safe areas globales (iPhone/Android) */
             padding-left: env(safe-area-inset-left);
             padding-right: env(safe-area-inset-right);
         }
@@ -128,7 +122,6 @@
             padding: 0 32px;
         }
 
-        /* TYPO */
         h1 {
             font-size: clamp(3.2rem, 7vw, 5.1rem);
             font-weight: 700;
@@ -154,7 +147,6 @@
             max-width: 90%;
         }
 
-        /* BUTTONS */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -226,7 +218,6 @@
             width: 100%;
         }
 
-        /* Bouton Stripe */
         .btn-stripe {
             display: inline-block;
             padding: 16px 32px;
@@ -275,7 +266,6 @@
             backdrop-filter: blur(2px);
         }
 
-        /* LAYOUT */
         .section {
             padding: 60px 0;
             position: relative;
@@ -292,7 +282,6 @@
             .grid-2 { grid-template-columns: 1fr; gap: 60px; }
         }
 
-        /* CARDS */
         .card {
             background: var(--bg-card);
             border: 1px solid var(--border-light);
@@ -310,7 +299,6 @@
             border-color: var(--accent-glow);
         }
 
-        /* HEADER (identique) */
         .navbar-wrapper {
             position: sticky;
             top: 0;
@@ -345,7 +333,6 @@
             color: var(--accent-primary);
         }
 
-        /* HERO */
         .hero {
             display: grid;
             grid-template-columns: 1.1fr 1fr;
@@ -521,7 +508,6 @@
             filter: drop-shadow(0 2px 4px rgba(30,126,75,0.3));
         }
 
-        /* CHANNEL ICONS */
         .channel-icons {
             display: flex;
             justify-content: center;
@@ -556,7 +542,6 @@
             }
         }
 
-        /* STEPS */
         .grid-steps {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
@@ -611,7 +596,6 @@
             font-size: 0.92rem;
         }
 
-        /* ROI */
         .roi-card {
             background: linear-gradient(135deg, var(--bg-soft), white);
             border: 1px solid var(--border-light);
@@ -651,7 +635,6 @@
             color: var(--text-secondary);
         }
 
-        /* PRICING */
         .offer-single {
             max-width: 550px;
             margin: 0 auto;
@@ -715,7 +698,6 @@
             flex-shrink: 0;
         }
 
-        /* FAQ */
         .faq-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -748,7 +730,6 @@
             line-height: 1.6;
         }
 
-        /* MINI SCENARIO */
         .mini-scenario {
             background: linear-gradient(145deg, var(--bg-soft), #f5f3ef);
             padding: 28px;
@@ -758,7 +739,6 @@
             box-shadow: inset 0 0 0 1px rgba(184,158,111,0.1), 0 10px 25px -15px rgba(0,0,0,0.2);
         }
 
-        /* WHO GRID */
         .who-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -771,7 +751,6 @@
             .who-grid { grid-template-columns: 1fr !important; }
         }
 
-        /* CTA SECTION */
         .cta-section {
             background: linear-gradient(145deg, var(--bg-soft), #ffffff);
             border-radius: var(--radius-main);
@@ -796,7 +775,6 @@
             margin: 0 auto 30px;
         }
 
-        /* FOOTER */
         .footer {
             background: var(--bg-soft);
             color: var(--text-primary);
@@ -903,7 +881,6 @@
             color: var(--accent-primary);
         }
 
-        /* ANIMATIONS */
         @keyframes floatUp {
             0% { opacity: 0; transform: translateY(26px); }
             100% { opacity: 1; transform: translateY(0); }
@@ -941,7 +918,6 @@
             opacity: 1;
         }
 
-        /* STICKY CTA MOBILE */
         .sticky-cta {
             display: none;
         }
@@ -964,10 +940,10 @@
                 margin: 0;
                 padding: 12px 24px !important;
                 font-size: 15px !important;
-                height: auto !important;  /* Changé pour s'adapter au contenu */
+                height: auto !important;
                 min-height: 48px !important;
-                white-space: normal !important; /* Permet le retour à la ligne */
-                line-height: 1.3 !important; /* Ajusté pour deux lignes */
+                white-space: normal !important;
+                line-height: 1.3 !important;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -982,7 +958,6 @@
             .footer { padding: 40px 0 20px !important; margin-top: 40px !important; }
         }
 
-        /* Micro-optimisation pour très petits écrans (≤360px) */
         @media (max-width: 360px) {
             .sticky-cta .btn-stripe {
                 font-size: 14px !important;
@@ -995,7 +970,6 @@
             .section { padding: 55px 0 !important; }
         }
 
-        /* Typing indicator and hidden utility */
         .typing-indicator {
             display: flex;
             align-items: center;
@@ -1024,7 +998,6 @@
             display: none !important;
         }
 
-        /* ===== Nouveaux styles pour la section configuration ===== */
         .config-card {
             background: var(--bg-card);
             border: 1px solid var(--border-light);
@@ -1145,9 +1118,6 @@
             .config-option { padding: 12px 18px; font-size: 1rem; }
         }
 
-        /* ===== CORRECTIONS MOBILES (ANTI-RÉGRESSION) ===== */
-
-        /* 2) Menu haut : padding et scroll horizontal si nécessaire */
         @media (max-width: 768px) {
             .navbar {
                 overflow-x: auto;
@@ -1162,20 +1132,12 @@
                 flex-wrap: nowrap;
                 gap: 20px;
             }
-        }
-
-        /* 3) Cartes : padding et marges adaptés */
-        @media (max-width: 768px) {
             .card,
             .faq-item {
                 padding: 18px 16px;
                 margin: 12px;
             }
         }
-
-        /* ===== FIN CORRECTIONS ===== */
-
-        /* ===== Sticky CTA Desktop — Ajout isolé ===== */
 
         .sticky-cta-desktop {
             display: none;
@@ -1192,7 +1154,6 @@
                 pointer-events: none;
                 transition: opacity 0.25s ease;
             }
-
             .sticky-cta-desktop .btn-stripe {
                 margin: 0;
                 padding: 14px 26px;
@@ -1201,7 +1162,6 @@
             }
         }
 
-        /* ===== Sticky CTA Mobile — Couleur noire et adaptation texte ===== */
         @media (max-width: 768px) {
             .sticky-cta .btn-stripe {
                 background: linear-gradient(135deg, #222, #000) !important;
@@ -1213,10 +1173,6 @@
                 transform: translateY(-2px) !important;
                 box-shadow: 0 20px 30px -8px rgba(0,0,0,0.5) !important;
             }
-        }
-
-        /* ===== Correction ROI mobile (affichage complet) ===== */
-        @media (max-width: 768px) {
             .roi-highlight {
                 font-size: 2.6rem !important;
                 line-height: 1.2 !important;
@@ -1231,9 +1187,6 @@
     </style>
 </head>
 <body class="no-js">
-    <!-- H1 invisible SEO supprimé -->
-
-    <!-- NAVBAR inchangée sauf le texte du bouton Activer -->
     <div class="navbar-wrapper">
         <div class="container">
             <nav class="navbar" id="navbar">
@@ -1242,14 +1195,12 @@
                     <a href="#solution">Solution</a>
                     <a href="#comment">Comment ça marche</a>
                     <a href="#offre">Offre</a>
-                    <!-- MODIFICATION : "Activer" devient "Activer l'assistant" -->
                     <a href="#offre" class="btn-secondary">Activer l'assistant</a>
                 </div>
             </nav>
         </div>
     </div>
 
-    <!-- HERO IMMOBILIER -->
     <section class="section">
         <div class="container">
             <div class="hero">
@@ -1258,21 +1209,21 @@
                         <i class="fas fa-robot"></i>
                         Assistant IA immobilier
                     </div>
-                    <!-- MODIFICATION EFFECTUÉE ICI : remplacement de "vos campagnes immobilières" par "votre publicité immobilière en ligne" -->
                     <h1>Rentabilisez votre publicité immobilière en ligne<br><span style="color: var(--accent-primary);">grâce à un Assistant IA</span><br><span class="accent-glow">qui convertit vos visiteurs en prospects qualifiés.</span></h1>
                     <p class="lead">Google Ads, portails immobiliers, réseaux sociaux… Vous investissez pour attirer des acheteurs et vendeurs, mais la majorité repart sans laisser ses coordonnées.</p>
-                    <!-- Phrase ajoutée pour cibler les annonceurs Ads -->
                     <p style="font-size: 1.1rem; color: var(--accent-primary); font-weight: 500; margin-top: 10px;">Idéal pour les agents immobiliers et mandataires qui investissent dans la publicité en ligne.</p>
+                    <!-- ✅ Ajout de la micro-preuve sociale -->
+                    <p style="font-size:1rem; color:var(--text-secondary); margin-top:8px;">Utilisé par des agents et mandataires partout en France</p>
+                    <!-- ✅ Ajout de la projection business -->
+                    <p style="font-size:1rem; color:var(--text-secondary); margin-top:8px;">Chaque jour sans assistant = des prospects potentiels perdus</p>
                     <div style="margin: 30px 0 20px; display: flex; gap: 20px; flex-wrap: wrap;">
                         <span style="display: flex; align-items: center; gap: 6px; font-size: 0.95rem; color: var(--text-secondary);"><i class="fas fa-check-circle" style="color: var(--accent-primary);"></i> Édité par DevChatbotIA®</span>
                         <span style="display: flex; align-items: center; gap: 6px; font-size: 0.95rem; color: var(--text-secondary);"><i class="fas fa-check-circle" style="color: var(--accent-primary);"></i> Technologie propriétaire</span>
                     </div>
                     <div style="margin: 20px 0 10px;">
-                        <!-- 🔥 BOUTON PRINCIPAL : CONFIGURATEUR sans flamme, texte premium -->
                         <a href="https://config.devchatbotia.app/" class="btn-stripe" target="_blank" rel="noopener">
-                           Configurer mon assistant IA immobilier <i class="fas fa-arrow-right"></i>
+                           Activer mon assistant IA immobilier <i class="fas fa-arrow-right"></i>
                         </a>
-                        <!-- MODIFICATION : clarification du tarif -->
                         <p style="font-size:1rem; font-weight:500; margin-top:5px;">Configuration gratuite · 49€/mois ensuite · sans engagement</p>
                         <p style="font-size:0.9rem; color: var(--muted); margin-top:12px;">
                             🔒 Paiement sécurisé Stripe · Activation rapide
@@ -1286,7 +1237,6 @@
                     </div>
                 </div>
                 <div class="hero-visual">
-                    <!-- Contenu statique (fallback) avec les nouveaux messages -->
                     <div class="message-thread" id="heroMessageThread">
                         <div class="msg in">
                             <div class="msg-avatar">🏠</div>
@@ -1320,7 +1270,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- CALENDAR SNIP MODIFIÉ -->
                     <div class="calendar-snip" id="heroCalendarSnip">
                         <span><i class="far fa-calendar-check"></i> Demande de visite reçue</span>
                         <span>➡️ Coordonnées collectées : M. Dubois — 06 ••• •• •• •• ✅</span>
@@ -1330,13 +1279,13 @@
         </div>
     </section>
 
-    <!-- PREUVE SOCIALE IMMO (MISE À JOUR SANS CHIFFRES NON VÉRIFIABLES) -->
     <section class="section">
         <div class="container" style="text-align: center; max-width: 900px;">
             <div class="badge" style="margin: 0 auto;">Déjà adopté</div>
             <h2>Des agents et agences immobilières l'utilisent</h2>
+            <!-- ✅ Fusion en une seule phrase forte -->
             <p style="color: var(--text-secondary); margin-bottom: 20px; font-size:1.2rem; font-weight:600;">
-                👉 Déjà utilisé par des agences et mandataires partout en France
+                👉 Déjà adopté par des professionnels de l'immobilier partout en France.
             </p>
             <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; font-weight: 500; margin-bottom: 25px;">
                 <span>🏢 Agences immobilières</span>
@@ -1345,10 +1294,6 @@
                 <span>📊 Gestion locative</span>
                 <span>📍 Agents locaux</span>
             </div>
-            <p style="color: var(--text-secondary); font-size:1.1rem; margin-bottom: 10px;">
-                📈 Des milliers de conversations automatisées
-            </p>
-            <!-- Phrase ajoutée pour conversion -->
             <p style="color: var(--text-secondary); font-size:1rem; margin-bottom: 10px;">
                 Sans embauche supplémentaire.
             </p>
@@ -1358,7 +1303,6 @@
         </div>
     </section>
 
-    <!-- PROBLÈME : TRAFIC IMMOBILIER NON CONVERTI -->
     <section id="probleme" class="section">
         <div class="container">
             <div class="grid-2">
@@ -1384,7 +1328,6 @@
                             <span>Demandes en soirée ou week-end = aucune réponse → prospect perdu</span>
                         </div>
                     </div>
-                    <!-- PHRASE AJOUTÉE SUR LE COÛT DES CLICS GOOGLE ADS -->
                     <p style="font-size: 1.2rem; color: var(--text-secondary); margin-top: 20px; margin-bottom: 20px;">
                         💸 Chaque clic Google Ads peut coûter entre 2 € et 15 € selon les zones.
                     </p>
@@ -1398,7 +1341,6 @@
         </div>
     </section>
 
-    <!-- SOLUTION : ASSISTANT IA IMMOBILIER -->
     <section id="solution" class="section">
         <div class="container">
             <div class="grid-2">
@@ -1409,16 +1351,17 @@
                         Il transforme votre trafic existant en contacts qualifiés, 24h/24.
                     </p>
                     <p style="color: var(--text-secondary); margin-bottom: 20px;">
-                        L'assistant répond aux questions, qualifie le projet (acheteur/vendeur, budget, secteur) et collecte les coordonnées.
+                        L'assistant répond aux questions, qualifie le projet (acheteur/vendeur, budget, secteur) et centralise automatiquement les demandes dans votre tableau de bord sécurisé.
                     </p>
                     <div style="margin-top: 20px;">
                         <ul class="check-list">
-                            <li><i class="fas fa-check-circle"></i> Capture des visiteurs anonymes dès l'arrivée sur votre site</li>
+                            <li><i class="fas fa-check-circle"></i> Capture des visiteurs anonymes dès leur arrivée</li>
                             <li><i class="fas fa-check-circle"></i> Qualification automatique : projet, budget, délai</li>
-                            <li><i class="fas fa-check-circle"></i> Envoi des coordonnées directement dans votre CRM ou par email</li>
+                            <li><i class="fas fa-check-circle"></i> Centralisation des contacts dans votre tableau de bord sécurisé</li>
+                            <li><i class="fas fa-check-circle"></i> Accès en temps réel aux demandes qualifiées</li>
                             <li><i class="fas fa-check-circle"></i> Réponse instantanée même hors horaires d'ouverture</li>
-                            <li><i class="fas fa-check-circle"></i> Alternative aux formulaires souvent ignorés</li>
-                            <li><i class="fas fa-check-circle"></i> Idéal pour les annonces, pages biens et site d'agence</li>
+                            <li><i class="fas fa-check-circle"></i> Alternative performante aux formulaires ignorés</li>
+                            <li><i class="fas fa-check-circle"></i> Idéal pour annonces, pages biens et sites d'agence</li>
                         </ul>
                     </div>
                     <p style="font-size: 1.35rem; margin-top: 32px; color: var(--accent-primary);">Vous ne perdez plus aucune opportunité.</p>
@@ -1431,7 +1374,6 @@
         </div>
     </section>
 
-    <!-- COMMENT ÇA MARCHE (étapes immobilières) -->
     <section id="comment" class="section">
         <div class="container">
             <div style="text-align: center; margin-bottom: 50px;">
@@ -1464,7 +1406,7 @@
                 <div class="step-item">
                     <div class="step-number">4</div>
                     <p>Coordonnées collectées</p>
-                    <div class="step-desc">transmises à l'agent</div>
+                    <div class="step-desc">centralisées dans votre tableau de bord</div>
                 </div>
                 <div class="step-item">
                     <div class="step-number">✓</div>
@@ -1475,7 +1417,6 @@
         </div>
     </section>
 
-    <!-- ROI IMMOBILIER -->
     <section class="section">
         <div class="container">
             <div class="roi-card">
@@ -1489,7 +1430,6 @@
         </div>
     </section>
 
-    <!-- POUR QUI -->
     <section class="section" style="padding: 40px 0 20px;">
         <div class="container">
             <div style="max-width: 900px; margin: 0 auto; text-align: center;">
@@ -1519,7 +1459,6 @@
         </div>
     </section>
 
-    <!-- RÉASSURANCE AVANT PRIX -->
     <section class="section">
         <div class="container" style="max-width:900px; margin:auto; text-align:center;">
             <div class="badge" style="margin:0 auto;">Simple et transparent</div>
@@ -1550,7 +1489,6 @@
         </div>
     </section>
 
-    <!-- OFFRE 49€ -->
     <section id="offre" class="section">
         <div class="container">
             <div style="text-align: center; margin-bottom: 40px;">
@@ -1575,7 +1513,6 @@
                         <li><i class="fas fa-check-circle"></i> Adaptation à votre secteur (vente, location, achat)</li>
                     </ul>
 
-                    <!-- RISK REVERSAL -->
                     <div style="margin-top:30px; padding:20px; background:#faf9f7; border-radius:16px; border:1px solid var(--border-light);">
                         <p style="font-weight:600; margin-bottom:10px;">Aucun risque.</p>
                         <p style="font-size:0.95rem;color:var(--text-secondary);line-height:1.6;">
@@ -1586,7 +1523,6 @@
                         </p>
                     </div>
 
-                    <!-- BOUTON STRIPE (ACHAT DIRECT) AVEC TEXTE CLARIFIÉ -->
                     <a href="https://buy.stripe.com/9B67sL5733aR02tfm89AA01" class="btn-stripe" style="margin-top: 30px; width: 100%;" target="_blank" rel="noopener">
                         Activer mon assistant IA immobilier <i class="fas fa-arrow-right"></i>
                     </a>
@@ -1596,14 +1532,12 @@
                 </div>
             </div>
 
-            <!-- Lien vers site principal (MODIFIÉ) -->
             <div style="text-align: center; margin-top: 40px;">
                 <p style="color: var(--text-secondary);">Pour des besoins avancés (multi-agences, CRM dédié) : <a href="https://www.devchatbotia.com/tarifs-agents-ia-chatbots" style="color: var(--accent-primary); font-weight: 600;">Découvrir les solutions avancées →</a></p>
             </div>
         </div>
     </section>
 
-    <!-- ===== NOUVELLE SECTION : CONFIGURATION DE L'AGENT IA ===== -->
     <section class="section" id="configuration">
         <div class="container">
             <div style="text-align: center; margin-bottom: 40px;">
@@ -1613,13 +1547,11 @@
             </div>
 
             <div class="config-card">
-                <!-- En-tête avec progression et badge "Agent IA actif" -->
                 <div class="config-progress">
                     <span class="badge-light"><i class="fas fa-brain" style="margin-right: 6px;"></i>🧠 Agent IA actif</span>
-                    <span class="question-counter">Question 1 sur 9 <span style="color: var(--text-secondary); font-weight: 400;"></span></span>
+                    <span class="question-counter">Question 1 sur 9</span>
                 </div>
 
-                <!-- Question et options (première question d'exemple) -->
                 <div class="config-question">
                     <h3>Quel est votre principal objectif avec cet agent IA ?</h3>
                     <div class="config-options">
@@ -1630,7 +1562,6 @@
                     </div>
                 </div>
 
-                <!-- Pied de page avec statistiques et badge de confiance -->
                 <div class="config-footer">
                     <div class="config-stats">
                         <span><i class="fas fa-comment-dots"></i> +1 000 conversations</span>
@@ -1642,22 +1573,18 @@
                 </div>
             </div>
 
-            <!-- Note d'information supplémentaire -->
             <p style="text-align: center; color: var(--text-secondary); margin-top: 30px; font-size: 0.95rem;">
                 <i class="fas fa-robot" style="color: var(--accent-glow); margin-right: 6px;"></i> 
                 Configuration intelligente — vos réponses adaptent l'agent à votre activité immobilière.
             </p>
         </div>
     </section>
-    <!-- ===== FIN SECTION CONFIGURATION ===== -->
 
-    <!-- FAQ IMMOBILIÈRE -->
     <section class="section">
         <div class="container">
             <div id="faq" class="faq-grid">
                 <div class="faq-item">
                     <h4>Est-ce compliqué à installer sur mon site ?</h4>
-                    <!-- ✅ CORRECTION COPYWRITING : version premium -->
                     <p>Non. Nous déployons votre assistant IA sur votre site ou via un lien sécurisé dédié. La mise en service est rapide et entièrement accompagnée, sans compétence technique requise.</p>
                 </div>
                 <div class="faq-item">
@@ -1688,21 +1615,25 @@
                     <h4>Combien de temps pour l'activer ?</h4>
                     <p>La configuration initiale prend moins de 24h, souvent quelques heures. L'assistant peut être opérationnel le jour même.</p>
                 </div>
+                <div class="faq-item">
+                    <h4>Est-ce conforme au RGPD ?</h4>
+                    <p>Oui. Les données collectées sont sécurisées et utilisées uniquement pour le traitement des demandes. L'assistant peut être configuré selon vos obligations légales et vos politiques de confidentialité.</p>
+                </div>
             </div>
 
-            <!-- CTA FINAL (STRIPE LIVE) -->
             <div class="cta-section">
                 <h3>Ne laissez plus votre trafic immobilier repartir sans résultat</h3>
                 <p>Activez votre assistant IA immobilier et commencez à générer davantage de prospects qualifiés dès aujourd'hui.</p>
                 <a href="https://buy.stripe.com/9B67sL5733aR02tfm89AA01" class="btn-stripe" style="padding: 20px 50px; font-size: 1.2rem;" target="_blank" rel="noopener">
                     Activer mon assistant IA immobilier <i class="fas fa-arrow-right"></i>
                 </a>
+                <!-- ✅ Ajout de l'urgence douce -->
+                <p style="margin-top:10px;font-size:0.9rem;color:var(--muted);">Activation possible aujourd’hui</p>
                 <p style="margin-top: 25px; font-size: 0.95rem; color: var(--muted);">🔒 Paiement sécurisé Stripe · Sans engagement · Activation rapide</p>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER (modification : suppression de "Immobilier" à côté du logo) -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -1732,9 +1663,17 @@
         </div>
     </footer>
 
-    <!-- Sticky CTA mobile (STRIPE LIVE) avec classe btn-stripe pour cohérence visuelle -->
     <div class="sticky-cta">
         <a href="https://buy.stripe.com/9B67sL5733aR02tfm89AA01" class="btn-stripe" target="_blank" rel="noopener">
+           Activer mon assistant IA immobilier
+        </a>
+    </div>
+
+    <div class="sticky-cta-desktop">
+        <a href="https://buy.stripe.com/9B67sL5733aR02tfm89AA01"
+           class="btn-stripe"
+           target="_blank"
+           rel="noopener">
            Activer mon assistant IA immobilier
         </a>
     </div>
@@ -1746,20 +1685,15 @@
         });
     </script>
 
-    <!-- Script d'animation de la conversation HERO (adapté avec les nouveaux messages) -->
     <script>
         (function() {
             const messageThread = document.getElementById('heroMessageThread');
             const calendarSnip = document.getElementById('heroCalendarSnip');
             if (!messageThread || !calendarSnip) return;
 
-            // Cacher le calendrier au début
             calendarSnip.classList.add('hidden');
-
-            // Vider le contenu statique pour le remplacer par la version dynamique
             messageThread.innerHTML = '';
 
-            // Définition des messages (contenu immobilier - version enrichie)
             const messages = [
                 { role: 'in', avatar: '🏠', text: 'Bonjour, je viens de voir votre annonce Google. Cherche maison avec jardin autour de 400 000 €.' },
                 { role: 'out', avatar: '⚡', text: 'Merci pour votre message 😊<br>Est-ce pour une résidence principale ou un investissement ?<br><small>Assistant IA · 24/7</small>' },
@@ -1769,13 +1703,12 @@
                 { role: 'out', avatar: '⚡', text: 'Excellent 👍<br>Plusieurs biens correspondent.<br><br>Pouvez-vous me laisser vos coordonnées pour qu’un conseiller vous contacte rapidement et organise les visites ?' }
             ];
 
-            const typingDuration = 2600;  // 2,6 secondes d'indicateur de frappe
-            const messageDuration = 2000;  // 2 secondes entre les messages
-            let delay = 1000; // délai initial avant le premier message (1 seconde)
+            const typingDuration = 2600;
+            const messageDuration = 2000;
+            let delay = 1000;
 
             messages.forEach((msg, index) => {
                 if (msg.role === 'out') {
-                    // 1️⃣ Indicateur de frappe
                     setTimeout(() => {
                         const typingDiv = document.createElement('div');
                         typingDiv.className = 'msg out';
@@ -1795,7 +1728,6 @@
                     }, delay);
                     delay += typingDuration;
 
-                    // 2️⃣ Vrai message
                     setTimeout(() => {
                         const typingDiv = document.getElementById(`typing-${index}`);
                         if (typingDiv) typingDiv.remove();
@@ -1809,7 +1741,7 @@
 
                         const bubble = document.createElement('div');
                         bubble.className = 'msg-bubble';
-                        bubble.innerHTML = msg.text; // contient du HTML (small, br)
+                        bubble.innerHTML = msg.text;
 
                         msgDiv.appendChild(avatar);
                         msgDiv.appendChild(bubble);
@@ -1817,7 +1749,6 @@
                     }, delay);
                     delay += messageDuration;
                 } else {
-                    // Message entrant
                     setTimeout(() => {
                         const msgDiv = document.createElement('div');
                         msgDiv.className = `msg ${msg.role}`;
@@ -1828,7 +1759,7 @@
 
                         const bubble = document.createElement('div');
                         bubble.className = 'msg-bubble';
-                        bubble.textContent = msg.text; // textContent pour éviter d'interpréter du HTML (pas nécessaire ici)
+                        bubble.textContent = msg.text;
 
                         msgDiv.appendChild(avatar);
                         msgDiv.appendChild(bubble);
@@ -1838,66 +1769,45 @@
                 }
             });
 
-            // Après le dernier message, attendre un peu puis afficher le calendrier
             setTimeout(() => {
                 calendarSnip.classList.remove('hidden');
-            }, delay + 1000); // 1 seconde supplémentaire pour que l'utilisateur lise le dernier message
+            }, delay + 1000);
         })();
     </script>
 
-    <!-- Script pour rendre le sticky CTA non intrusif (apparaît après scroll) -->
     <script>
         (function(){
             const sticky = document.querySelector('.sticky-cta');
-            if (!sticky) return;
+            if (sticky) {
+                sticky.style.opacity = '0';
+                sticky.style.pointerEvents = 'none';
+                sticky.style.transition = 'opacity 0.25s ease';
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 400) {
+                        sticky.style.opacity = '1';
+                        sticky.style.pointerEvents = 'auto';
+                    } else {
+                        sticky.style.opacity = '0';
+                        sticky.style.pointerEvents = 'none';
+                    }
+                });
+            }
 
-            // Initialisation : caché par défaut
-            sticky.style.opacity = '0';
-            sticky.style.pointerEvents = 'none';
-            sticky.style.transition = 'opacity 0.25s ease';
-
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 400) {
-                    sticky.style.opacity = '1';
-                    sticky.style.pointerEvents = 'auto';
-                } else {
-                    sticky.style.opacity = '0';
-                    sticky.style.pointerEvents = 'none';
-                }
-            });
+            const stickyDesktop = document.querySelector('.sticky-cta-desktop');
+            if (stickyDesktop) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 500) {
+                        stickyDesktop.style.opacity = '1';
+                        stickyDesktop.style.pointerEvents = 'auto';
+                    } else {
+                        stickyDesktop.style.opacity = '0';
+                        stickyDesktop.style.pointerEvents = 'none';
+                    }
+                });
+            }
         })();
     </script>
 
-    <!-- ========== INTÉGRATION DE L'AGENT IA ========== -->
-    <!-- Remplacez l'URL ci-dessous par le lien réel de votre script -->
     <script src="https://devchatbotia.com/chat.js?site=immo" async></script>
-    <!-- ============================================== -->
-
-    <!-- Sticky CTA Desktop (non intrusif) -->
-    <div class="sticky-cta-desktop">
-        <a href="https://buy.stripe.com/9B67sL5733aR02tfm89AA01"
-           class="btn-stripe"
-           target="_blank"
-           rel="noopener">
-           Activer mon assistant IA immobilier
-        </a>
-    </div>
-
-    <script>
-    (function(){
-        const sticky = document.querySelector('.sticky-cta-desktop');
-        if (!sticky) return;
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
-                sticky.style.opacity = '1';
-                sticky.style.pointerEvents = 'auto';
-            } else {
-                sticky.style.opacity = '0';
-                sticky.style.pointerEvents = 'none';
-            }
-        });
-    })();
-    </script>
 </body>
 </html>
