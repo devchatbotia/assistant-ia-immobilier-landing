@@ -66,8 +66,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
+        /* Styles identiques à l’original */
         :root {
             --bg-primary: #ffffff;
             --bg-soft: #faf9f7;
@@ -518,26 +520,30 @@
             gap: 24px;
             margin-top: 16px;
             color: var(--muted);
+            font-size: 1.6rem;
         }
         
-        .channel-icons svg {
-            width: 24px;
-            height: 24px;
+        .channel-icons i {
             transition: all 0.2s ease;
+            filter: grayscale(100%);
             opacity: 0.8;
-            fill: none;
-            stroke: currentColor;
-            stroke-width: 1.5;
         }
         
-        .channel-icons svg:hover {
+        .channel-icons i:hover {
+            filter: grayscale(0%);
             opacity: 1;
             transform: translateY(-2px);
         }
         
+        .channel-icons .fa-whatsapp:hover { color: #25D366; }
+        .channel-icons .fa-facebook-messenger:hover { color: #0084FF; }
+        .channel-icons .fa-instagram:hover { color: #E4405F; }
+        .channel-icons .fa-globe:hover { color: var(--accent-primary); }
+        
         @media (max-width: 768px) {
             .channel-icons {
                 gap: 18px;
+                font-size: 1.4rem;
                 flex-wrap: wrap;
             }
         }
@@ -691,13 +697,11 @@
             gap: 12px;
         }
 
-        .check-list svg {
-            width: 1.25rem;
-            height: 1.25rem;
+        .check-list i {
+            color: var(--accent-primary);
+            width: 24px;
+            font-size: 1.25rem;
             flex-shrink: 0;
-            stroke: var(--accent-primary);
-            stroke-width: 1.8;
-            fill: none;
         }
 
         .faq-grid {
@@ -841,10 +845,9 @@
             margin-bottom: 10px;
         }
 
-        .footer-contact svg {
+        .footer-contact i {
             color: var(--accent-glow);
-            width: 18px;
-            height: 18px;
+            width: 20px;
         }
 
         .footer-bottom {
@@ -880,12 +883,8 @@
             gap: 10px;
         }
 
-        .micro-proof svg {
-            width: 1.1rem;
-            height: 1.1rem;
-            stroke: var(--accent-primary);
-            stroke-width: 1.8;
-            fill: none;
+        .micro-proof i {
+            color: var(--accent-primary);
         }
 
         @keyframes floatUp {
@@ -1033,9 +1032,6 @@
             padding: 8px 18px;
             font-weight: 500;
             font-size: 0.9rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
         }
 
         .question-counter {
@@ -1086,6 +1082,7 @@
             box-shadow: 0 5px 15px rgba(26,42,39,0.1);
         }
 
+        /* Icône SVG helper */
         .ui-icon {
             width: 1.1em;
             height: 1.1em;
@@ -1119,12 +1116,13 @@
             font-size: 0.95rem;
         }
 
-        .config-stats svg {
-            width: 1.1rem;
-            height: 1.1rem;
+        .config-stats i {
+            color: var(--accent-glow);
             margin-right: 5px;
-            stroke: var(--accent-glow);
-            fill: none;
+        }
+
+        .config-stats .fa-lock {
+            color: var(--muted);
         }
 
         .config-badge-success {
@@ -1234,7 +1232,7 @@
             <div class="hero">
                 <div>
                     <div class="badge">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="9" x2="15" y2="15"/><line x1="15" y1="9" x2="9" y2="15"/></svg>
+                        <i class="fas fa-robot"></i>
                         Assistant IA immobilier
                     </div>
                     <h1>Rentabilisez votre publicité immobilière en ligne<br><span style="color: var(--accent-primary);">grâce à un Assistant IA</span><br><span class="accent-glow">qui convertit vos visiteurs en prospects qualifiés.</span></h1>
@@ -1260,70 +1258,99 @@
                     </p>
                     
                     <p style="font-size: 1.1rem; color: var(--accent-primary); font-weight: 500; margin-top: 12px;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="margin-right: 8px;"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                        <i class="fas fa-comment-dots" style="margin-right: 8px;"></i> 
                         Vos prospects ont besoin d’un contact immédiat, pas d’un formulaire.
                     </p>
                     
                     <p style="font-size: 0.95rem; color: var(--accent-primary); font-weight: 500; margin-top: 12px;">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="margin-right: 6px;"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                        Optimise le ROI des campagnes Google Ads immobilières
+                        <i class="fas fa-chart-line" style="margin-right: 6px;"></i> Optimise le ROI des campagnes Google Ads immobilières
                     </p>
                     
                     <p style="font-size:1rem; color:var(--text-secondary); margin-top:18px;">Conçu pour les professionnels qui investissent dans l’acquisition digitale</p>
                     <p style="font-size:1rem; color:var(--text-secondary); margin-top:8px;">Chaque jour sans assistant = des prospects potentiels perdus</p>
                     <div style="margin: 30px 0 20px; display: flex; gap: 20px; flex-wrap: wrap;">
-                        <span style="display: flex; align-items: center; gap: 6px; font-size: 0.95rem; color: var(--text-secondary);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="20 6 9 17 4 12"/></svg> Édité par DevChatbotIA®</span>
-                        <span style="display: flex; align-items: center; gap: 6px; font-size: 0.95rem; color: var(--text-secondary);"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="20 6 9 17 4 12"/></svg> Technologie propriétaire</span>
+                        <span style="display: flex; align-items: center; gap: 6px; font-size: 0.95rem; color: var(--text-secondary);"><i class="fas fa-check-circle" style="color: var(--accent-primary);"></i> Édité par DevChatbotIA®</span>
+                        <span style="display: flex; align-items: center; gap: 6px; font-size: 0.95rem; color: var(--text-secondary);"><i class="fas fa-check-circle" style="color: var(--accent-primary);"></i> Technologie propriétaire</span>
                     </div>
                     <div style="margin: 20px 0 10px;">
                         <a href="https://config.devchatbotia.app/" class="btn-stripe" target="_blank" rel="noopener">
-                           Activer mon assistant IA immobilier <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                           Activer mon assistant IA immobilier <i class="fas fa-arrow-right"></i>
                         </a>
                         <p style="font-size:1rem; font-weight:500; margin-top:5px;">Configuration gratuite · 49€/mois ensuite · sans engagement</p>
                         <p style="font-size:0.9rem; color:var(--muted); margin-top:8px;">
-                            Activation généralement le jour même · Sans engagement
+                            Activation en moins de 24h · Sans engagement
                         </p>
-                        <p style="font-size:0.9rem; color: var(--muted); margin-top:12px; display: flex; align-items: center; gap: 6px;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="11" width="14" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                            Paiement sécurisé Stripe · Activation rapide
+                        <p style="font-size:0.9rem; color: var(--muted); margin-top:12px;">
+                            🔒 Paiement sécurisé Stripe · Activation rapide
                         </p>
                     </div>
                     <div class="micro-proof">
-                        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg> Conversion du trafic existant</span>
-                        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg> Qualification automatique</span>
-                        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg> 24h/24, même week-end</span>
-                        <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg> Idéal pour agences et mandataires</span>
+                        <span><i class="fas fa-check-circle"></i> Conversion du trafic existant</span>
+                        <span><i class="fas fa-check-circle"></i> Qualification automatique</span>
+                        <span><i class="fas fa-check-circle"></i> 24h/24, même week-end</span>
+                        <span><i class="fas fa-check-circle"></i> Idéal pour agences et mandataires</span>
                     </div>
                 </div>
                 <div class="hero-visual">
                     <div class="message-thread" id="heroMessageThread">
                         <div class="msg in">
-                            <div class="msg-avatar"><svg class="ui-icon" viewBox="0 0 24 24"><path d="M3 9L12 3L21 9L12 15L3 9Z" stroke="currentColor" fill="none"/><path d="M3 9V15L12 21L21 15V9" stroke="currentColor" fill="none"/><path d="M12 21V15" stroke="currentColor" fill="none"/></svg></div>
+                            <div class="msg-avatar">
+                                <svg class="ui-icon" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+                                    <path d="M3 9L12 3L21 9L12 15L3 9Z" stroke="currentColor" stroke-width="1.8" fill="none"/>
+                                    <path d="M3 9V15L12 21L21 15V9" stroke="currentColor" stroke-width="1.8" fill="none"/>
+                                    <path d="M12 21V15" stroke="currentColor" stroke-width="1.8"/>
+                                </svg>
+                            </div>
                             <div class="msg-bubble">Bonjour, je viens de voir votre annonce Google. Cherche maison avec jardin autour de 400 000 €.</div>
                         </div>
                         <div class="msg out">
-                            <div class="msg-avatar"><img src="https://static.wixstatic.com/media/3c8e1e_27544c53a52f4493a5703f6f2a111bd8~mv2.webp" alt="Assistant IA" style="width:100%;height:100%;border-radius:50%;object-fit:cover;"></div>
-                            <div class="msg-bubble">Merci pour votre message.<br>Est-ce pour une résidence principale ou un investissement ?<small>Assistant IA · 24/7</small></div>
+                            <div class="msg-avatar">
+                                <img src="https://static.wixstatic.com/media/3c8e1e_27544c53a52f4493a5703f6f2a111bd8~mv2.webp" alt="Assistant IA" style="width:100%;height:100%;border-radius:50%;object-fit:cover;">
+                            </div>
+                            <div class="msg-bubble">
+                                Merci pour votre message 😊<br>Est-ce pour une résidence principale ou un investissement ?
+                                <small>Assistant IA · 24/7</small>
+                            </div>
                         </div>
                         <div class="msg in">
-                            <div class="msg-avatar"><svg class="ui-icon" viewBox="0 0 24 24"><path d="M3 9L12 3L21 9L12 15L3 9Z" stroke="currentColor" fill="none"/><path d="M3 9V15L12 21L21 15V9" stroke="currentColor" fill="none"/><path d="M12 21V15" stroke="currentColor" fill="none"/></svg></div>
+                            <div class="msg-avatar">
+                                <svg class="ui-icon" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+                                    <path d="M3 9L12 3L21 9L12 15L3 9Z" stroke="currentColor" stroke-width="1.8" fill="none"/>
+                                    <path d="M3 9V15L12 21L21 15V9" stroke="currentColor" stroke-width="1.8" fill="none"/>
+                                    <path d="M12 21V15" stroke="currentColor" stroke-width="1.8"/>
+                                </svg>
+                            </div>
                             <div class="msg-bubble">Résidence principale.</div>
                         </div>
                         <div class="msg out">
-                            <div class="msg-avatar"><img src="https://static.wixstatic.com/media/3c8e1e_27544c53a52f4493a5703f6f2a111bd8~mv2.webp" alt="Assistant IA" style="width:100%;height:100%;border-radius:50%;object-fit:cover;"></div>
-                            <div class="msg-bubble">Parfait.<br>Pouvez-vous préciser :<br><br>• nombre de chambres souhaité<br>• secteur préféré<br>• si votre financement est validé<br><br>L’agent pourra vous orienter immédiatement.</div>
+                            <div class="msg-avatar">
+                                <img src="https://static.wixstatic.com/media/3c8e1e_27544c53a52f4493a5703f6f2a111bd8~mv2.webp" alt="Assistant IA" style="width:100%;height:100%;border-radius:50%;object-fit:cover;">
+                            </div>
+                            <div class="msg-bubble">
+                                Parfait 👍<br>Pouvez-vous préciser :<br><br>• nombre de chambres souhaité<br>• secteur préféré<br>• si votre financement est validé<br><br>👉 L’agent pourra vous orienter immédiatement.
+                            </div>
                         </div>
                         <div class="msg in">
-                            <div class="msg-avatar"><svg class="ui-icon" viewBox="0 0 24 24"><path d="M3 9L12 3L21 9L12 15L3 9Z" stroke="currentColor" fill="none"/><path d="M3 9V15L12 21L21 15V9" stroke="currentColor" fill="none"/><path d="M12 21V15" stroke="currentColor" fill="none"/></svg></div>
+                            <div class="msg-avatar">
+                                <svg class="ui-icon" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+                                    <path d="M3 9L12 3L21 9L12 15L3 9Z" stroke="currentColor" stroke-width="1.8" fill="none"/>
+                                    <path d="M3 9V15L12 21L21 15V9" stroke="currentColor" stroke-width="1.8" fill="none"/>
+                                    <path d="M12 21V15" stroke="currentColor" stroke-width="1.8"/>
+                                </svg>
+                            </div>
                             <div class="msg-bubble">3 chambres, Ouest lyonnais, financement validé.</div>
                         </div>
                         <div class="msg out">
-                            <div class="msg-avatar"><img src="https://static.wixstatic.com/media/3c8e1e_27544c53a52f4493a5703f6f2a111bd8~mv2.webp" alt="Assistant IA" style="width:100%;height:100%;border-radius:50%;object-fit:cover;"></div>
-                            <div class="msg-bubble">Excellent.<br>Plusieurs biens correspondent.<br><br>Pouvez-vous me laisser vos coordonnées pour qu’un conseiller vous contacte rapidement et organise les visites ?</div>
+                            <div class="msg-avatar">
+                                <img src="https://static.wixstatic.com/media/3c8e1e_27544c53a52f4493a5703f6f2a111bd8~mv2.webp" alt="Assistant IA" style="width:100%;height:100%;border-radius:50%;object-fit:cover;">
+                            </div>
+                            <div class="msg-bubble">
+                                Excellent 👍<br>Plusieurs biens correspondent.<br><br>Pouvez-vous me laisser vos coordonnées pour qu’un conseiller vous contacte rapidement et organise les visites ?
+                            </div>
                         </div>
                     </div>
                     <div class="calendar-snip" id="heroCalendarSnip">
-                        <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-glow)" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Demande de visite reçue</span>
+                        <span><i class="far fa-calendar-check"></i> Demande de visite reçue</span>
                         <span>➡️ Coordonnées collectées : M. Dubois — 06 ••• •• •• •• ✅</span>
                     </div>
                     <p style="font-size:0.85rem;color:var(--muted);text-align:center;margin-top:12px;">
@@ -1342,11 +1369,11 @@
                 Conçu pour maximiser la valeur des contacts issus de vos campagnes publicitaires
             </p>
             <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; font-weight: 500; margin-bottom: 25px;">
-                <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" style="margin-right: 6px;"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> Agences immobilières</span>
-                <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Mandataires indépendants</span>
-                <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M8 10h8"/></svg> Promoteurs</span>
-                <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg> Gestion locative</span>
-                <span><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)"><path d="M12 2c-4 0-7 3-7 7 0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg> Agents locaux</span>
+                <span><i class="fas fa-building" style="margin-right: 8px; color: var(--accent-primary);"></i> Agences immobilières</span>
+                <span><i class="fas fa-user-tie" style="margin-right: 8px; color: var(--accent-primary);"></i> Mandataires indépendants</span>
+                <span><i class="fas fa-city" style="margin-right: 8px; color: var(--accent-primary);"></i> Promoteurs</span>
+                <span><i class="fas fa-chart-line" style="margin-right: 8px; color: var(--accent-primary);"></i> Gestion locative</span>
+                <span><i class="fas fa-map-marker-alt" style="margin-right: 8px; color: var(--accent-primary);"></i> Agents locaux</span>
             </div>
             <p style="color: var(--text-secondary); font-size:1rem; margin-bottom: 10px;">
                 Sans embauche supplémentaire.
@@ -1364,32 +1391,31 @@
                     <div class="badge">Le constat</div>
                     <h2>Votre trafic immobilier vaut bien plus que ce qu'il vous rapporte aujourd'hui</h2>
                     <div class="mini-scenario">
-                        <p style="font-size: 1.3rem; font-weight: 500; margin-bottom: 16px;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="display: inline-block; vertical-align: middle;"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="7.5 11.5 12 14 16.5 11.5"/></svg> <strong>Entre 60 % et 90 % des visiteurs</strong> quittent un site immobilier sans interaction.</p>
+                        <p style="font-size: 1.3rem; font-weight: 500; margin-bottom: 16px;">📊 <strong>Entre 60 % et 90 % des visiteurs</strong> quittent un site immobilier sans interaction.</p>
                         <p style="font-size: 1.3rem; font-weight: 500; margin-bottom: 16px;">Ils viennent de vos annonces, de Google, des réseaux… et repartent sans laisser de trace.</p>
                         <p style="font-size: 1.3rem; font-weight: 600; color: var(--accent-primary);">Chaque clic non converti représente un budget perdu.</p>
                     </div>
                     <div style="margin-top: 30px;">
                         <div class="list-item" style="display: flex; gap: 18px; align-items: center; margin-bottom: 26px; font-size: 1.3rem;">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M12 22V12"/><polyline points="9 10 12 13 15 10"/></svg>
+                            <span style="font-size: 2.2rem;">📉</span>
                             <span>80% de vos visiteurs ne laissent jamais leurs coordonnées</span>
                         </div>
                         <div class="list-item" style="display: flex; gap: 18px; align-items: center; margin-bottom: 26px; font-size: 1.3rem;">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            <span style="font-size: 2.2rem;">⏱️</span>
                             <span>Un prospect qui contacte plusieurs agences choisit la première qui répond</span>
                         </div>
                         <div class="list-item" style="display: flex; gap: 18px; align-items: center; margin-bottom: 26px; font-size: 1.3rem;">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                            <span style="font-size: 2.2rem;">🌙</span>
                             <span>Demandes en soirée ou week-end = aucune réponse → prospect perdu</span>
                         </div>
                     </div>
                     <p style="font-size: 1.2rem; color: var(--text-secondary); margin-top: 20px; margin-bottom: 20px;">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="display: inline-block;"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                        Chaque clic Google Ads peut coûter entre 2 € et 15 € selon les zones.
+                        💸 Chaque clic Google Ads peut coûter entre 2 € et 15 € selon les zones.
                     </p>
                     <p style="font-size: 2rem; font-weight: 700; margin-top: 40px; color: var(--accent-primary);">Sans interaction immédiate, ils poursuivent leurs recherches ailleurs.</p>
                 </div>
                 <div class="card" style="text-align: center; padding: 56px 32px;">
-                    <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="1" opacity="0.3"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                    <i class="fas fa-chart-line" style="font-size: 7rem; color: var(--accent-primary); opacity: 0.3;"></i>
                     <p style="font-size: 1.2rem; color: var(--text-secondary); margin-top: 26px;">Vous investissez pour attirer du monde, mais votre taux de conversion reste faible.</p>
                 </div>
             </div>
@@ -1402,12 +1428,22 @@
             <h2>Pourquoi les formulaires ne suffisent plus aujourd'hui</h2>
             <div style="display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:40px;">
                 <div class="card" style="text-align:left;">
-                    <h3 style="margin-bottom:15px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Formulaire classique</h3>
-                    <ul style="color:var(--text-secondary);line-height:1.8;"><li>Passif : attend une action du visiteur</li><li>Taux d'abandon élevé</li><li>Aucune réponse immédiate</li><li>Prospect souvent parti chez un concurrent</li></ul>
+                    <h3 style="margin-bottom:15px;">❌ Formulaire classique</h3>
+                    <ul style="color:var(--text-secondary);line-height:1.8;">
+                        <li>Passif : attend une action du visiteur</li>
+                        <li>Taux d'abandon élevé</li>
+                        <li>Aucune réponse immédiate</li>
+                        <li>Prospect souvent parti chez un concurrent</li>
+                    </ul>
                 </div>
                 <div class="card" style="text-align:left;">
-                    <h3 style="margin-bottom:15px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"/></svg> Assistant IA</h3>
-                    <ul style="color:var(--text-secondary);line-height:1.8;"><li>Interaction immédiate</li><li>Qualification automatique</li><li>Disponible 24h/24</li><li>Capture les prospects avant qu'ils quittent le site</li></ul>
+                    <h3 style="margin-bottom:15px;">✅ Assistant IA</h3>
+                    <ul style="color:var(--text-secondary);line-height:1.8;">
+                        <li>Interaction immédiate</li>
+                        <li>Qualification automatique</li>
+                        <li>Disponible 24h/24</li>
+                        <li>Capture les prospects avant qu'ils quittent le site</li>
+                    </ul>
                 </div>
             </div>
             <p style="margin-top:25px;color:var(--text-secondary);font-size:1rem;">
@@ -1424,8 +1460,12 @@
                 Vous investissez pour attirer des acheteurs et vendeurs… mais une grande partie repart sans interaction.
             </p>
             <div class="mini-scenario" style="margin-top:30px;">
-                <p style="font-size:1.3rem;font-weight:600;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg> Un clic Google Ads peut coûter entre 2 € et 15 €.</p>
-                <p style="margin-top:10px;">Sans réponse immédiate, ce prospect poursuit ses recherches ailleurs.</p>
+                <p style="font-size:1.3rem;font-weight:600;">
+                    💸 Un clic Google Ads peut coûter entre 2 € et 15 €.
+                </p>
+                <p style="margin-top:10px;">
+                    Sans réponse immédiate, ce prospect poursuit ses recherches ailleurs.
+                </p>
             </div>
             <p style="margin-top:20px;color:var(--accent-primary);font-weight:600;font-size:1.3rem;">
                 Votre assistant IA transforme ce trafic payé en contacts exploitables.
@@ -1462,20 +1502,20 @@
                     </p>
                     <div style="margin-top: 20px;">
                         <ul class="check-list">
-                            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Capture des visiteurs anonymes dès leur arrivée</li>
-                            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Qualification automatique : projet, budget, délai</li>
-                            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Centralisation des contacts dans votre tableau de bord sécurisé</li>
-                            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Accès en temps réel aux demandes qualifiées</li>
-                            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Réponse instantanée même hors horaires d'ouverture</li>
-                            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Alternative performante aux formulaires ignorés</li>
-                            <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Idéal pour annonces, pages biens et sites d'agence</li>
+                            <li><i class="fas fa-check-circle"></i> Capture des visiteurs anonymes dès leur arrivée</li>
+                            <li><i class="fas fa-check-circle"></i> Qualification automatique : projet, budget, délai</li>
+                            <li><i class="fas fa-check-circle"></i> Centralisation des contacts dans votre tableau de bord sécurisé</li>
+                            <li><i class="fas fa-check-circle"></i> Accès en temps réel aux demandes qualifiées</li>
+                            <li><i class="fas fa-check-circle"></i> Réponse instantanée même hors horaires d'ouverture</li>
+                            <li><i class="fas fa-check-circle"></i> Alternative performante aux formulaires ignorés</li>
+                            <li><i class="fas fa-check-circle"></i> Idéal pour annonces, pages biens et sites d'agence</li>
                         </ul>
                     </div>
                     <p style="font-size: 1.35rem; margin-top: 32px; color: var(--accent-primary);">Vous ne perdez plus aucune opportunité.</p>
                 </div>
                 <div class="card" style="padding: 52px 36px;">
                     <p style="font-size: 1.2rem; color: var(--text-secondary); line-height: 1.8;">Un assistant conversationnel peut augmenter les conversions de <strong>20 % à 70 %</strong> selon le secteur. Dans l'immobilier, c'est la différence entre un prospect perdu et un mandat signé.</p>
-                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" opacity="0.2" style="margin-top:28px;"><path d="M12 2a10 10 0 0 1 10 10c0 5-4 9-9 9-1.2 0-2.4-.2-3.5-.7L3 21l2.7-6.5A9 9 0 0 1 12 2z"/></svg>
+                    <i class="fas fa-brain" style="font-size: 5rem; color: var(--accent-primary); opacity: 0.2; margin-top: 28px;"></i>
                 </div>
             </div>
         </div>
@@ -1489,11 +1529,37 @@
                 <p class="lead" style="margin: 0 auto;">Du visiteur anonyme au contact qualifié.</p>
             </div>
             <div class="grid-steps">
-                <div class="step-item"><div class="step-number">1</div><p>Visiteur arrive</p><div class="step-desc">site, annonce, réseaux sociaux</div><div class="channel-icons"><svg viewBox="0 0 24 24" stroke="currentColor"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M18 2h-3a4 4 0 0 0-4 4v3H8v4h3v8h4v-8h3l1-4h-4V6a1 1 0 0 1 1-1h3z"/></svg><svg viewBox="0 0 24 24" stroke="currentColor"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg><svg viewBox="0 0 24 24" stroke="currentColor"><path d="M20 7h-4.18A3 3 0 0 0 16 5.18V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v1.18A3 3 0 0 0 8.18 7H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/></svg></div></div>
-                <div class="step-item"><div class="step-number">2</div><p>Assistant engage</p><div class="step-desc">pose des questions sur le projet</div></div>
-                <div class="step-item"><div class="step-number">3</div><p>Qualification</p><div class="step-desc">acheteur/vendeur, budget, secteur</div></div>
-                <div class="step-item"><div class="step-number">4</div><p>Coordonnées collectées</p><div class="step-desc">centralisées dans votre tableau de bord</div></div>
-                <div class="step-item"><div class="step-number">✓</div><p>Prospect qualifié</p><div class="step-desc">vous pouvez le rappeler</div></div>
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <p>Visiteur arrive</p>
+                    <div class="step-desc">site, annonce, réseaux sociaux</div>
+                    <div class="channel-icons">
+                        <i class="fas fa-globe" title="Site web"></i>
+                        <i class="fab fa-facebook" title="Facebook"></i>
+                        <i class="fab fa-instagram" title="Instagram"></i>
+                        <i class="fas fa-ad" title="Google Ads"></i>
+                    </div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <p>Assistant engage</p>
+                    <div class="step-desc">pose des questions sur le projet</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <p>Qualification</p>
+                    <div class="step-desc">acheteur/vendeur, budget, secteur</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <p>Coordonnées collectées</p>
+                    <div class="step-desc">centralisées dans votre tableau de bord</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">✓</div>
+                    <p>Prospect qualifié</p>
+                    <div class="step-desc">vous pouvez le rappeler</div>
+                </div>
             </div>
         </div>
     </section>
@@ -1502,7 +1568,7 @@
         <div class="container">
             <div class="roi-card">
                 <div class="badge" style="background: rgba(26,42,39,0.08); color: var(--accent-primary); margin: 0 auto;">Rentabilité immédiate</div>
-                <p style="font-size: 1.3rem; color: var(--text-secondary); margin-bottom: 10px;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" style="display: inline-block;"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg> Une seule demande supplémentaire suffit.</p>
+                <p style="font-size: 1.3rem; color: var(--text-secondary); margin-bottom: 10px;">👉 Une seule demande supplémentaire suffit.</p>
                 <div class="roi-highlight">1 seul prospect<br>supplémentaire</div>
                 <p style="font-size: 1.6rem; max-width: 680px; margin: 0 auto; color: var(--text-primary);">= outil rentabilisé.</p>
                 <p style="color: var(--text-secondary); margin-top: 18px; font-size: 1.1rem;">Si un seul acheteur ou vendeur contacté grâce à l'assistant aboutit à une commission, l'abonnement est déjà amorti.</p>
@@ -1517,13 +1583,55 @@
                 <div class="badge" style="margin: 0 auto;">Pour qui c'est fait</div>
                 <h2 style="margin-top: 20px;">Vous êtes concerné si...</h2>
                 <div class="who-grid">
-                    <div style="display: flex; align-items: center; gap: 12px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)"><polyline points="20 6 9 17 4 12"/></svg><span>Vous êtes agent immobilier ou mandataire</span></div>
-                    <div style="display: flex; align-items: center; gap: 12px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)"><polyline points="20 6 9 17 4 12"/></svg><span>Vous investissez dans Google Ads ou des portails</span></div>
-                    <div style="display: flex; align-items: center; gap: 12px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)"><polyline points="20 6 9 17 4 12"/></svg><span>Vous recevez des demandes sur vos annonces</span></div>
-                    <div style="display: flex; align-items: center; gap: 12px;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)"><polyline points="20 6 9 17 4 12"/></svg><span>Vous n'avez pas le temps de répondre immédiatement à tous</span></div>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <i class="fas fa-check-circle" style="color: var(--accent-primary); font-size: 1.5rem;"></i>
+                        <span style="font-size: 1.1rem; text-align: left;">Vous êtes agent immobilier ou mandataire</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <i class="fas fa-check-circle" style="color: var(--accent-primary); font-size: 1.5rem;"></i>
+                        <span style="font-size: 1.1rem; text-align: left;">Vous investissez dans Google Ads ou des portails</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <i class="fas fa-check-circle" style="color: var(--accent-primary); font-size: 1.5rem;"></i>
+                        <span style="font-size: 1.1rem; text-align: left;">Vous recevez des demandes sur vos annonces</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px;">
+                        <i class="fas fa-check-circle" style="color: var(--accent-primary); font-size: 1.5rem;"></i>
+                        <span style="font-size: 1.1rem; text-align: left;">Vous n'avez pas le temps de répondre immédiatement à tous</span>
+                    </div>
                 </div>
                 <p style="font-size: 1.1rem; color: var(--text-secondary); margin: 20px 0;">Que vous soyez une agence structurée ou un indépendant, l'assistant s'adapte à votre activité.</p>
                 <p style="font-size: 1.4rem; font-weight: 500; color: var(--accent-primary); margin-top: 30px;">Alors cet assistant IA est fait pour vous.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container" style="max-width:900px; margin:auto; text-align:center;">
+            <div class="badge" style="margin:0 auto;">Simple et transparent</div>
+            <h2>Pourquoi les pros de l'immobilier l'adoptent</h2>
+            <p style="color:var(--text-secondary); margin-bottom:40px;">Une solution sans complication technique pour générer plus de contacts.</p>
+            <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:20px; max-width:700px; margin:auto;">
+                <div class="card" style="padding:30px 20px;">
+                    <i class="fas fa-check-circle" style="font-size:1.5rem;color:var(--accent-primary);"></i>
+                    <p style="margin-top:10px;font-weight:600;">Activation rapide</p>
+                    <p style="font-size:0.95rem;color:var(--text-secondary);">Installation en quelques heures</p>
+                </div>
+                <div class="card" style="padding:30px 20px;">
+                    <i class="fas fa-check-circle" style="font-size:1.5rem;color:var(--accent-primary);"></i>
+                    <p style="margin-top:10px;font-weight:600;">Sans engagement</p>
+                    <p style="font-size:0.95rem;color:var(--text-secondary);">Résiliez à tout moment</p>
+                </div>
+                <div class="card" style="padding:30px 20px;">
+                    <i class="fas fa-check-circle" style="font-size:1.5rem;color:var(--accent-primary);"></i>
+                    <p style="margin-top:10px;font-weight:600;">Configuration incluse</p>
+                    <p style="font-size:0.95rem;color:var(--text-secondary);">Nous adaptons l'assistant à votre activité</p>
+                </div>
+                <div class="card" style="padding:30px 20px;">
+                    <i class="fas fa-check-circle" style="font-size:1.5rem;color:var(--accent-primary);"></i>
+                    <p style="margin-top:10px;font-weight:600;">Support disponible</p>
+                    <p style="font-size:0.95rem;color:var(--text-secondary);">Une équipe à votre écoute</p>
+                </div>
             </div>
         </div>
     </section>
@@ -1537,87 +1645,400 @@
             </div>
             <div class="offer-single">
                 <div class="price-card-single">
-                    <div class="price"><span class="amount">49€</span><span class="period">/mois</span></div>
+                    <div class="price">
+                        <span class="amount">49€</span>
+                        <span class="period">/mois</span>
+                    </div>
                     <span style="font-size:0.9rem;color:var(--muted);display:block;margin-top:-10px;margin-bottom:10px;">moins de 2€ par jour</span>
                     <p style="color: var(--text-secondary); margin-bottom: 20px;">Paramétrage inclus · Résiliation immédiate</p>
                     <ul class="check-list">
-                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Assistant IA disponible 24h/24, 7j/7</li>
-                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Capture et qualification automatique des visiteurs</li>
-                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Intégration sur votre site, pages de biens ou annonces</li>
-                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Transmission des coordonnées par email ou CRM</li>
-                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Tableau de bord pour suivre les conversations</li>
-                        <li><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Adaptation à votre secteur (vente, location, achat)</li>
+                        <li><i class="fas fa-check-circle"></i> Assistant IA disponible 24h/24, 7j/7</li>
+                        <li><i class="fas fa-check-circle"></i> Capture et qualification automatique des visiteurs</li>
+                        <li><i class="fas fa-check-circle"></i> Intégration sur votre site, pages de biens ou annonces</li>
+                        <li><i class="fas fa-check-circle"></i> Transmission des coordonnées par email ou CRM</li>
+                        <li><i class="fas fa-check-circle"></i> Tableau de bord pour suivre les conversations</li>
+                        <li><i class="fas fa-check-circle"></i> Adaptation à votre secteur (vente, location, achat)</li>
                     </ul>
-                    <div style="margin-top:30px; padding:20px; background:#faf9f7; border-radius:16px; border:1px solid var(--border-light);"><p style="font-weight:600; margin-bottom:10px;">Aucun risque.</p><p style="font-size:0.95rem;color:var(--text-secondary);line-height:1.6;">✔ activation rapide<br>✔ résiliation possible à tout moment<br>✔ configuration incluse<br>✔ support disponible si besoin</p></div>
-                    <a href="https://buy.stripe.com/9B67sL5733aR02tfm89AA01" class="btn-stripe" style="margin-top: 30px; width: 100%;" target="_blank" rel="noopener">Activer mon assistant IA immobilier <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-                    <p style="font-size:0.85rem; color: var(--muted); margin-top: 20px; display: flex; align-items: center; justify-content: center; gap: 6px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="5" y="11" width="14" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Paiement sécurisé Stripe<br><span style="font-size:0.9rem;">Activation généralement le jour même.</span></p>
+
+                    <div style="margin-top:30px; padding:20px; background:#faf9f7; border-radius:16px; border:1px solid var(--border-light);">
+                        <p style="font-weight:600; margin-bottom:10px;">Aucun risque.</p>
+                        <p style="font-size:0.95rem;color:var(--text-secondary);line-height:1.6;">
+                            ✔ activation rapide<br>
+                            ✔ résiliation possible à tout moment<br>
+                            ✔ configuration incluse<br>
+                            ✔ support disponible si besoin
+                        </p>
+                    </div>
+
+                    <a href="https://buy.stripe.com/9B67sL5733aR02tfm89AA01" class="btn-stripe" style="margin-top: 30px; width: 100%;" target="_blank" rel="noopener">
+                        Activer mon assistant IA immobilier <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <p style="font-size:0.85rem; color: var(--muted); margin-top: 20px;">
+                        🔒 Paiement sécurisé Stripe<br><span style="font-size:0.9rem;">Activation en moins de 24h.</span>
+                    </p>
                 </div>
             </div>
-            <div style="text-align: center; margin-top: 40px;"><p style="color: var(--text-secondary);">Pour des besoins avancés (multi-agences, CRM dédié) : <a href="https://www.devchatbotia.com/tarifs-agents-ia-chatbots" style="color: var(--accent-primary); font-weight: 600;">Découvrir les solutions avancées →</a></p></div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <p style="color: var(--text-secondary);">Pour des besoins avancés (multi-agences, CRM dédié) : <a href="https://www.devchatbotia.com/tarifs-agents-ia-chatbots" style="color: var(--accent-primary); font-weight: 600;">Découvrir les solutions avancées →</a></p>
+            </div>
         </div>
     </section>
 
     <section class="section" id="configuration">
         <div class="container">
             <div style="text-align: center; margin-bottom: 40px;">
-                <div class="badge" style="margin: 0 auto;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Configuration intelligente — 60 secondes</div>
+                <div class="badge" style="margin: 0 auto;">⚡ Configuration intelligente — 60 secondes</div>
                 <h2>Configuration de votre Agent IA Autonome™</h2>
                 <p class="lead" style="margin: 0 auto;">Répondez à 9 questions simples pour personnaliser votre assistant.</p>
             </div>
+
             <div class="config-card">
-                <div class="config-progress"><span class="badge-light"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2a10 10 0 0 1 10 10c0 5-4 9-9 9-1.2 0-2.4-.2-3.5-.7L3 21l2.7-6.5A9 9 0 0 1 12 2z"/></svg> Agent IA actif</span><span class="question-counter">Question 1 sur 9</span></div>
-                <div class="config-question"><h3>Quel est votre principal objectif avec cet agent IA ?</h3><div class="config-options"><div class="config-option"><svg class="ui-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> Qualifier les acheteurs</div><div class="config-option"><svg class="ui-icon" viewBox="0 0 24 24"><path d="M3 9L12 3L21 9L12 15L3 9Z"/><path d="M3 9V15L12 21L21 15V9"/><path d="M12 21V15"/></svg> Capturer des mandats de vente</div><div class="config-option"><svg class="ui-icon" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><circle cx="12" cy="15" r="1"/><circle cx="16" cy="15" r="1"/><circle cx="8" cy="15" r="1"/></svg> Planifier des visites</div><div class="config-option"><svg class="ui-icon" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> Répondre aux questions sur les biens</div></div></div>
-                <div class="config-footer"><div class="config-stats"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> +1 000 conversations</span><span class="config-badge-success"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="5" y="11" width="14" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Vos données confidentielles</span></div><a href="https://config.devchatbotia.app/" class="btn-stripe" style="margin:0;" target="_blank">Continuer la configuration <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
+                <div class="config-progress">
+                    <span class="badge-light"><i class="fas fa-brain" style="margin-right: 6px;"></i> Agent IA actif</span>
+                    <span class="question-counter">Question 1 sur 9</span>
+                </div>
+
+                <div class="config-question">
+                    <h3>Quel est votre principal objectif avec cet agent IA ?</h3>
+                    <div class="config-options">
+                        <div class="config-option">
+                            <svg class="ui-icon" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+                                <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="1.8"/>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="currentColor" stroke-width="1.8"/>
+                            </svg>
+                            Qualifier les acheteurs
+                        </div>
+                        <div class="config-option">
+                            <svg class="ui-icon" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+                                <path d="M3 9L12 3L21 9L12 15L3 9Z" stroke="currentColor" stroke-width="1.8"/>
+                                <path d="M3 9V15L12 21L21 15V9" stroke="currentColor" stroke-width="1.8"/>
+                                <path d="M12 21V15" stroke="currentColor" stroke-width="1.8"/>
+                            </svg>
+                            Capturer des mandats de vente
+                        </div>
+                        <div class="config-option">
+                            <svg class="ui-icon" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke="currentColor" stroke-width="1.8"/>
+                                <line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" stroke-width="1.8"/>
+                                <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" stroke-width="1.8"/>
+                                <line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" stroke-width="1.8"/>
+                                <circle cx="12" cy="15" r="1" fill="currentColor" stroke="none"/>
+                                <circle cx="16" cy="15" r="1" fill="currentColor" stroke="none"/>
+                                <circle cx="8" cy="15" r="1" fill="currentColor" stroke="none"/>
+                            </svg>
+                            Planifier des visites
+                        </div>
+                        <div class="config-option">
+                            <svg class="ui-icon" viewBox="0 0 24 24" stroke="currentColor" fill="none">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="1.8"/>
+                            </svg>
+                            Répondre aux questions sur les biens
+                        </div>
+                    </div>
+                </div>
+
+                <div class="config-footer">
+                    <div class="config-stats">
+                        <span><i class="fas fa-comment-dots"></i> +1 000 conversations</span>
+                        <span class="config-badge-success"><i class="fas fa-lock"></i> 🔐 Vos données confidentielles</span>
+                    </div>
+                    <a href="https://config.devchatbotia.app/" class="btn-stripe" style="margin: 0;" target="_blank" rel="noopener">
+                        Continuer la configuration <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
-            <p style="text-align: center; color: var(--text-secondary); margin-top: 30px; font-size: 0.95rem;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent-glow)" style="margin-right:6px;"><path d="M12 2a10 10 0 0 1 10 10c0 5-4 9-9 9-1.2 0-2.4-.2-3.5-.7L3 21l2.7-6.5A9 9 0 0 1 12 2z"/></svg> Configuration intelligente — vos réponses adaptent l'agent à votre activité immobilière.</p>
+
+            <p style="text-align: center; color: var(--text-secondary); margin-top: 30px; font-size: 0.95rem;">
+                <i class="fas fa-robot" style="color: var(--accent-glow); margin-right: 6px;"></i> 
+                Configuration intelligente — vos réponses adaptent l'agent à votre activité immobilière.
+            </p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div id="faq" class="faq-grid">
+                <div class="faq-item">
+                    <h4>Est-ce compliqué à installer sur mon site ?</h4>
+                    <p>Non. Nous déployons votre assistant IA sur votre site ou via un lien sécurisé dédié. La mise en service est rapide et entièrement accompagnée, sans compétence technique requise.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>L'assistant connaît-il mes biens disponibles ?</h4>
+                    <p>Oui, après une courte configuration où nous renseignons vos informations (types de biens, secteurs, fourchettes de prix).</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Que se passe-t-il si un client demande une visite précise ?</h4>
+                    <p>L'assistant collecte la demande et les coordonnées, puis vous êtes notifié pour organiser la visite. Il ne prend pas de décision à votre place.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Est-ce que ça fonctionne avec les formulaires existants ?</h4>
+                    <p>L'assistant peut soit remplacer, soit compléter vos formulaires. Il engage la conversation avant que le visiteur ne quitte la page.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Puis-je l'essayer sans m'engager ?</h4>
+                    <p>L'abonnement est sans engagement, vous pouvez résilier à tout moment. Nous offrons également une garantie satisfait ou remboursé sous 14 jours.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Est-ce adapté pour un mandataire seul ?</h4>
+                    <p>Absolument. L'assistant vous fait gagner un temps précieux en qualifiant les prospects, même quand vous êtes en visite ou indisponible.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Les prospects reçus sont-ils exploitables ?</h4>
+                    <p>Oui, ils incluent nom, téléphone, email, et les informations de qualification (type de bien, budget, secteur). Vous pouvez les contacter directement.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Combien de temps pour l'activer ?</h4>
+                    <p>La configuration initiale prend moins de 24h, souvent quelques heures. L'assistant peut être opérationnel le jour même.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Est-ce conforme au RGPD ?</h4>
+                    <p>Oui. Les données collectées sont sécurisées et utilisées uniquement pour le traitement des demandes. L'assistant peut être configuré selon vos obligations légales et vos politiques de confidentialité.</p>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <h3>Ne laissez plus votre trafic immobilier repartir sans résultat</h3>
+                <p>Activez votre assistant IA immobilier et commencez à générer davantage de prospects qualifiés dès aujourd'hui.</p>
+                <a href="https://buy.stripe.com/9B67sL5733aR02tfm89AA01" class="btn-stripe" style="padding: 20px 50px; font-size: 1.2rem;" target="_blank" rel="noopener">
+                    Activer mon assistant IA immobilier <i class="fas fa-arrow-right"></i>
+                </a>
+                <p style="margin-top:10px;font-size:0.9rem;color:var(--muted);">Activation possible aujourd’hui</p>
+                <p style="margin-top: 25px; font-size: 0.95rem; color: var(--muted);">🔒 Paiement sécurisé Stripe · Sans engagement · Activation rapide</p>
+            </div>
         </div>
     </section>
 
     <footer class="footer">
-        <div class="container"><div class="footer-grid"><div><div class="footer-logo">DevChatbotIA®</div><div class="footer-tagline">Agents IA Autonomes® — Solutions d'IA conversationnelle pour professionnels de l'immobilier</div><div class="footer-contact"><p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg> direction@devchatbotia.com</p><p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg> 09 81 01 32 07</p></div><div class="micro-proof" style="gap: 14px; margin-top: 15px;"><span><svg width="14" height="14" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Configuration personnalisée</span><span><svg width="14" height="14" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Sans engagement</span></div></div><div><h4>Légal</h4><a href="mentions-legales.html">Mentions légales</a><a href="confidentialite.html">Politique de confidentialité</a><a href="cgv.html">Conditions générales de vente</a></div></div><div class="footer-bottom"><p>© 2026 DevChatbotIA® – Tous droits réservés</p><p class="tech-badge">Agents IA Autonomes® — technologie propriétaire exclusive</p></div></div>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">DevChatbotIA®</div>
+                    <div class="footer-tagline">Agents IA Autonomes® — Solutions d'IA conversationnelle pour professionnels de l'immobilier</div>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-envelope"></i> direction@devchatbotia.com</p>
+                        <p><i class="fas fa-phone-alt"></i> 09 81 01 32 07</p>
+                    </div>
+                    <div class="micro-proof" style="gap: 14px; margin-top: 15px;">
+                        <span><i class="fas fa-check-circle"></i> Configuration personnalisée</span>
+                        <span><i class="fas fa-check-circle"></i> Sans engagement</span>
+                    </div>
+                </div>
+                <div>
+                    <h4>Légal</h4>
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="confidentialite.html">Politique de confidentialité</a>
+                    <a href="cgv.html">Conditions générales de vente</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 DevChatbotIA® – Tous droits réservés</p>
+                <p class="tech-badge">Agents IA Autonomes® — technologie propriétaire exclusive</p>
+            </div>
+        </div>
     </footer>
 
-    <div class="sticky-cta"><a href="https://buy.stripe.com/9B67sL5733aR02tfm89AA01" class="btn-stripe" target="_blank">Activer mon assistant IA immobilier</a></div>
-    <div class="sticky-cta-desktop"><a href="https://buy.stripe.com/9B67sL5733aR02tfm89AA01" class="btn-stripe" target="_blank">Activer mon assistant IA immobilier</a></div>
+    <div class="sticky-cta">
+        <a href="https://buy.stripe.com/9B67sL5733aR02tfm89AA01" class="btn-stripe" target="_blank" rel="noopener">
+           Activer mon assistant IA immobilier
+        </a>
+    </div>
+
+    <div class="sticky-cta-desktop">
+        <a href="https://buy.stripe.com/9B67sL5733aR02tfm89AA01"
+           class="btn-stripe"
+           target="_blank"
+           rel="noopener">
+           Activer mon assistant IA immobilier
+        </a>
+    </div>
 
     <script>
-        window.addEventListener('load', () => { document.body.classList.add('loaded'); document.body.classList.remove('no-js'); });
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+            document.body.classList.remove('no-js');
+        });
+    </script>
+
+    <script>
         (function() {
             const messageThread = document.getElementById('heroMessageThread');
             const calendarSnip = document.getElementById('heroCalendarSnip');
             if (!messageThread || !calendarSnip) return;
+
             calendarSnip.classList.add('hidden');
             messageThread.innerHTML = '';
+
             const messages = [
                 { role: 'in', avatar: 'house', text: 'Bonjour, je viens de voir votre annonce Google. Cherche maison avec jardin autour de 400 000 €.' },
-                { role: 'out', avatar: 'https://static.wixstatic.com/media/3c8e1e_27544c53a52f4493a5703f6f2a111bd8~mv2.webp', text: 'Merci pour votre message.<br>Est-ce pour une résidence principale ou un investissement ?<br><small>Assistant IA · 24/7</small>' },
+                { role: 'out', avatar: 'https://static.wixstatic.com/media/3c8e1e_27544c53a52f4493a5703f6f2a111bd8~mv2.webp', text: 'Merci pour votre message 😊<br>Est-ce pour une résidence principale ou un investissement ?<br><small>Assistant IA · 24/7</small>' },
                 { role: 'in', avatar: 'house', text: 'Résidence principale.' },
-                { role: 'out', avatar: 'https://static.wixstatic.com/media/3c8e1e_27544c53a52f4493a5703f6f2a111bd8~mv2.webp', text: 'Parfait.<br>Pouvez-vous préciser :<br><br>• nombre de chambres souhaité<br>• secteur préféré<br>• si votre financement est validé<br><br>L’agent pourra vous orienter immédiatement.' },
+                { role: 'out', avatar: 'https://static.wixstatic.com/media/3c8e1e_27544c53a52f4493a5703f6f2a111bd8~mv2.webp', text: 'Parfait 👍<br>Pouvez-vous préciser :<br><br>• nombre de chambres souhaité<br>• secteur préféré<br>• si votre financement est validé<br><br>👉 L’agent pourra vous orienter immédiatement.' },
                 { role: 'in', avatar: 'house', text: '3 chambres, Ouest lyonnais, financement validé.' },
-                { role: 'out', avatar: 'https://static.wixstatic.com/media/3c8e1e_27544c53a52f4493a5703f6f2a111bd8~mv2.webp', text: 'Excellent.<br>Plusieurs biens correspondent.<br><br>Pouvez-vous me laisser vos coordonnées pour qu’un conseiller vous contacte rapidement et organise les visites ?' }
+                { role: 'out', avatar: 'https://static.wixstatic.com/media/3c8e1e_27544c53a52f4493a5703f6f2a111bd8~mv2.webp', text: 'Excellent 👍<br>Plusieurs biens correspondent.<br><br>Pouvez-vous me laisser vos coordonnées pour qu’un conseiller vous contacte rapidement et organise les visites ?' }
             ];
-            const typingDuration = 2600, messageDuration = 2000;
+
+            const typingDuration = 2600;
+            const messageDuration = 2000;
             let delay = 1000;
+
             messages.forEach((msg, index) => {
                 if (msg.role === 'out') {
-                    setTimeout(() => { const typingDiv = document.createElement('div'); typingDiv.className = 'msg out'; typingDiv.id = `typing-${index}`; const avatar = document.createElement('div'); avatar.className = 'msg-avatar'; const img = document.createElement('img'); img.src = msg.avatar; img.style.width = '100%'; img.style.height = '100%'; img.style.borderRadius = '50%'; img.style.objectFit = 'cover'; avatar.appendChild(img); const indicator = document.createElement('div'); indicator.className = 'typing-indicator'; indicator.innerHTML = '<span></span><span></span><span></span>'; typingDiv.appendChild(avatar); typingDiv.appendChild(indicator); messageThread.appendChild(typingDiv); }, delay);
+                    setTimeout(() => {
+                        const typingDiv = document.createElement('div');
+                        typingDiv.className = 'msg out';
+                        typingDiv.id = `typing-${index}`;
+
+                        const avatar = document.createElement('div');
+                        avatar.className = 'msg-avatar';
+                        const img = document.createElement('img');
+                        img.src = msg.avatar;
+                        img.style.width = '100%';
+                        img.style.height = '100%';
+                        img.style.borderRadius = '50%';
+                        img.style.objectFit = 'cover';
+                        avatar.appendChild(img);
+
+                        const indicator = document.createElement('div');
+                        indicator.className = 'typing-indicator';
+                        indicator.innerHTML = '<span></span><span></span><span></span>';
+
+                        typingDiv.appendChild(avatar);
+                        typingDiv.appendChild(indicator);
+                        messageThread.appendChild(typingDiv);
+                    }, delay);
                     delay += typingDuration;
-                    setTimeout(() => { const typingDiv = document.getElementById(`typing-${index}`); if(typingDiv) typingDiv.remove(); const msgDiv = document.createElement('div'); msgDiv.className = `msg ${msg.role}`; const avatar = document.createElement('div'); avatar.className = 'msg-avatar'; if(msg.avatar === 'house') { const svg = document.createElementNS('http://www.w3.org/2000/svg','svg'); svg.setAttribute('class','ui-icon'); svg.setAttribute('viewBox','0 0 24 24'); svg.setAttribute('stroke','currentColor'); svg.setAttribute('fill','none'); const path1=document.createElementNS('http://www.w3.org/2000/svg','path'); path1.setAttribute('d','M3 9L12 3L21 9L12 15L3 9Z'); const path2=document.createElementNS('http://www.w3.org/2000/svg','path'); path2.setAttribute('d','M3 9V15L12 21L21 15V9'); const path3=document.createElementNS('http://www.w3.org/2000/svg','path'); path3.setAttribute('d','M12 21V15'); svg.appendChild(path1); svg.appendChild(path2); svg.appendChild(path3); avatar.appendChild(svg); } else { const img=document.createElement('img'); img.src=msg.avatar; img.style.width='100%'; img.style.height='100%'; img.style.borderRadius='50%'; img.style.objectFit='cover'; avatar.appendChild(img); } const bubble=document.createElement('div'); bubble.className='msg-bubble'; bubble.innerHTML=msg.text; msgDiv.appendChild(avatar); msgDiv.appendChild(bubble); messageThread.appendChild(msgDiv); }, delay);
+
+                    setTimeout(() => {
+                        const typingDiv = document.getElementById(`typing-${index}`);
+                        if (typingDiv) typingDiv.remove();
+
+                        const msgDiv = document.createElement('div');
+                        msgDiv.className = `msg ${msg.role}`;
+
+                        const avatar = document.createElement('div');
+                        avatar.className = 'msg-avatar';
+                        if (msg.avatar === 'house') {
+                            const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                            svg.setAttribute('class', 'ui-icon');
+                            svg.setAttribute('viewBox', '0 0 24 24');
+                            svg.setAttribute('stroke', 'currentColor');
+                            svg.setAttribute('fill', 'none');
+                            const path1 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                            path1.setAttribute('d', 'M3 9L12 3L21 9L12 15L3 9Z');
+                            path1.setAttribute('stroke', 'currentColor');
+                            path1.setAttribute('stroke-width', '1.8');
+                            const path2 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                            path2.setAttribute('d', 'M3 9V15L12 21L21 15V9');
+                            path2.setAttribute('stroke', 'currentColor');
+                            path2.setAttribute('stroke-width', '1.8');
+                            const path3 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                            path3.setAttribute('d', 'M12 21V15');
+                            path3.setAttribute('stroke', 'currentColor');
+                            path3.setAttribute('stroke-width', '1.8');
+                            svg.appendChild(path1);
+                            svg.appendChild(path2);
+                            svg.appendChild(path3);
+                            avatar.appendChild(svg);
+                        } else {
+                            const img = document.createElement('img');
+                            img.src = msg.avatar;
+                            img.style.width = '100%';
+                            img.style.height = '100%';
+                            img.style.borderRadius = '50%';
+                            img.style.objectFit = 'cover';
+                            avatar.appendChild(img);
+                        }
+
+                        const bubble = document.createElement('div');
+                        bubble.className = 'msg-bubble';
+                        bubble.innerHTML = msg.text;
+
+                        msgDiv.appendChild(avatar);
+                        msgDiv.appendChild(bubble);
+                        messageThread.appendChild(msgDiv);
+                    }, delay);
                     delay += messageDuration;
                 } else {
-                    setTimeout(() => { const msgDiv = document.createElement('div'); msgDiv.className = `msg ${msg.role}`; const avatar = document.createElement('div'); avatar.className = 'msg-avatar'; const svg = document.createElementNS('http://www.w3.org/2000/svg','svg'); svg.setAttribute('class','ui-icon'); svg.setAttribute('viewBox','0 0 24 24'); svg.setAttribute('stroke','currentColor'); svg.setAttribute('fill','none'); const path1=document.createElementNS('http://www.w3.org/2000/svg','path'); path1.setAttribute('d','M3 9L12 3L21 9L12 15L3 9Z'); const path2=document.createElementNS('http://www.w3.org/2000/svg','path'); path2.setAttribute('d','M3 9V15L12 21L21 15V9'); const path3=document.createElementNS('http://www.w3.org/2000/svg','path'); path3.setAttribute('d','M12 21V15'); svg.appendChild(path1); svg.appendChild(path2); svg.appendChild(path3); avatar.appendChild(svg); const bubble=document.createElement('div'); bubble.className='msg-bubble'; bubble.textContent=msg.text; msgDiv.appendChild(avatar); msgDiv.appendChild(bubble); messageThread.appendChild(msgDiv); }, delay);
+                    setTimeout(() => {
+                        const msgDiv = document.createElement('div');
+                        msgDiv.className = `msg ${msg.role}`;
+
+                        const avatar = document.createElement('div');
+                        avatar.className = 'msg-avatar';
+                        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+                        svg.setAttribute('class', 'ui-icon');
+                        svg.setAttribute('viewBox', '0 0 24 24');
+                        svg.setAttribute('stroke', 'currentColor');
+                        svg.setAttribute('fill', 'none');
+                        const path1 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                        path1.setAttribute('d', 'M3 9L12 3L21 9L12 15L3 9Z');
+                        path1.setAttribute('stroke', 'currentColor');
+                        path1.setAttribute('stroke-width', '1.8');
+                        const path2 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                        path2.setAttribute('d', 'M3 9V15L12 21L21 15V9');
+                        path2.setAttribute('stroke', 'currentColor');
+                        path2.setAttribute('stroke-width', '1.8');
+                        const path3 = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                        path3.setAttribute('d', 'M12 21V15');
+                        path3.setAttribute('stroke', 'currentColor');
+                        path3.setAttribute('stroke-width', '1.8');
+                        svg.appendChild(path1);
+                        svg.appendChild(path2);
+                        svg.appendChild(path3);
+                        avatar.appendChild(svg);
+
+                        const bubble = document.createElement('div');
+                        bubble.className = 'msg-bubble';
+                        bubble.textContent = msg.text;
+
+                        msgDiv.appendChild(avatar);
+                        msgDiv.appendChild(bubble);
+                        messageThread.appendChild(msgDiv);
+                    }, delay);
                     delay += messageDuration;
                 }
             });
-            setTimeout(() => { calendarSnip.classList.remove('hidden'); }, delay + 1000);
-        })();
-        (function(){
-            const sticky = document.querySelector('.sticky-cta');
-            if(sticky){ sticky.style.opacity='0'; sticky.style.pointerEvents='none'; window.addEventListener('scroll',()=>{ if(window.scrollY>400){ sticky.style.opacity='1'; sticky.style.pointerEvents='auto'; } else { sticky.style.opacity='0'; sticky.style.pointerEvents='none'; } }); }
-            const stickyDesktop = document.querySelector('.sticky-cta-desktop');
-            if(stickyDesktop){ window.addEventListener('scroll',()=>{ if(window.scrollY>500){ stickyDesktop.style.opacity='1'; stickyDesktop.style.pointerEvents='auto'; } else { stickyDesktop.style.opacity='0'; stickyDesktop.style.pointerEvents='none'; } }); }
+
+            setTimeout(() => {
+                calendarSnip.classList.remove('hidden');
+            }, delay + 1000);
         })();
     </script>
+
+    <script>
+        (function(){
+            const sticky = document.querySelector('.sticky-cta');
+            if (sticky) {
+                sticky.style.opacity = '0';
+                sticky.style.pointerEvents = 'none';
+                sticky.style.transition = 'opacity 0.25s ease';
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 400) {
+                        sticky.style.opacity = '1';
+                        sticky.style.pointerEvents = 'auto';
+                    } else {
+                        sticky.style.opacity = '0';
+                        sticky.style.pointerEvents = 'none';
+                    }
+                });
+            }
+
+            const stickyDesktop = document.querySelector('.sticky-cta-desktop');
+            if (stickyDesktop) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 500) {
+                        stickyDesktop.style.opacity = '1';
+                        stickyDesktop.style.pointerEvents = 'auto';
+                    } else {
+                        stickyDesktop.style.opacity = '0';
+                        stickyDesktop.style.pointerEvents = 'none';
+                    }
+                });
+            }
+        })();
+    </script>
+
     <script src="https://devchatbotia.com/chat.js?site=immo" async></script>
 </body>
 </html>
