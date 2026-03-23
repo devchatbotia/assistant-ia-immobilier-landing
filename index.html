@@ -230,7 +230,7 @@
             letter-spacing: -0.01em;
             margin: 15px 0 5px;
             border: 1px solid rgba(184,158,111,0.3);
-            box-shadow: 0 10px 25px -5px rgba(26,42,39,0.4), 0 0 0 1px rgba(184,158,111,0.25), 0 0 20px rgba(184,158,111,0.15);
+            box-shadow: 0 10px 25px -5px rgba(26,42,39,0.4), 0 0 0 2px rgba(184,158,111,0.35), 0 0 20px rgba(184,158,111,0.15);
             animation: ctaPulse 3.5s ease-in-out infinite;
         }
 
@@ -241,7 +241,7 @@
 
         .btn-stripe:hover {
             transform: translateY(-3px);
-            box-shadow: 0 20px 30px -8px rgba(184,158,111,0.4), 0 0 0 1px rgba(184,158,111,0.4), 0 0 30px rgba(184,158,111,0.25);
+            box-shadow: 0 20px 30px -8px rgba(184,158,111,0.4), 0 0 0 2px rgba(184,158,111,0.4), 0 0 30px rgba(184,158,111,0.25);
             background: #0f1d1a;
         }
 
@@ -1188,61 +1188,17 @@
             }
         }
 
-        /* ---- Mobile navbar: horizontal scrollable, compact (commerçant style) ---- */
-        @media (max-width: 768px) {
+        /* ===== MENU MOBILE : MÊME MÉTHODE QUE PAGE COMMERÇANTS (FLEX-WRAP, PAS DE SCROLL) ===== */
+        @media (max-width: 1024px) {
             .navbar {
-                display: flex;
-                overflow-x: auto;
-                overflow-y: hidden;
-                padding: 8px 12px;
-                scrollbar-width: none;
-                -ms-overflow-style: none;
-                white-space: nowrap;
-                justify-content: flex-start;
-            }
-            .navbar::-webkit-scrollbar {
-                display: none;
+                flex-direction: column;
+                gap: 14px;
+                padding: 14px 0;
             }
             .nav-links {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: nowrap;
-                gap: 8px;
-                width: auto;
-                align-items: center;
-                margin: 0;
-                padding: 0;
-            }
-            .nav-links a {
-                display: inline-flex;
-                text-align: center;
-                padding: 8px 16px;
-                background: #f2f2f2;
-                border-radius: 20px;
-                border: 1px solid transparent;
-                width: auto;
-                font-size: 14px;
-                font-weight: 500;
-                white-space: nowrap;
-                flex: 0 0 auto;
-                color: var(--text-primary);
-            }
-            .nav-links a.btn-secondary {
-                background: linear-gradient(135deg, #0f2b24, #1f4a3c);
-                color: white;
-                border: none;
-            }
-            .navbar-wrapper {
-                position: relative;
-                top: 0;
-                background: white;
-                border-bottom: 1px solid var(--border-light);
-            }
-            /* keep existing card/faq adjustments */
-            .card,
-            .faq-item {
-                padding: 18px 16px;
-                margin: 12px 0;
+                gap: 18px;
+                flex-wrap: wrap;
+                justify-content: center;
             }
         }
     </style>
@@ -1256,7 +1212,7 @@
                     <a href="#solution">Solution</a>
                     <a href="#comment">Comment ça marche</a>
                     <a href="#offre">Offre</a>
-                    <a href="#offre" class="btn-secondary">Essai gratuit 14 jours</a>
+                    <a href="#offre" class="btn-secondary">Activer mon assistant IA — 14 jours gratuits</a>
                 </div>
             </nav>
         </div>
@@ -1309,7 +1265,7 @@
                     </div>
                     <div style="margin: 20px 0 10px;">
                         <a href="https://config.devchatbotia.app/" class="btn-stripe" target="_blank" rel="noopener">
-                           Essayer gratuitement 14 jours <i class="fas fa-arrow-right"></i>
+                           Activer mon assistant IA — 14 jours gratuits <i class="fas fa-arrow-right"></i>
                         </a>
                         <p style="font-size:1rem; font-weight:500; margin-top:5px;">14 jours d’essai gratuit · Sans carte bancaire · Puis 49€/mois sans engagement</p>
                         <p style="font-size:0.9rem; color:var(--muted); margin-top:8px;">
@@ -1703,7 +1659,7 @@
                     </div>
 
                     <a href="https://config.devchatbotia.app/" class="btn-stripe" style="margin-top: 30px; width: 100%;" target="_blank" rel="noopener">
-                        Essayer gratuitement 14 jours <i class="fas fa-arrow-right"></i>
+                        Activer mon assistant IA — 14 jours gratuits <i class="fas fa-arrow-right"></i>
                     </a>
                     <p style="font-size:0.85rem; color: var(--muted); margin-top: 20px;">
                         🔒 Paiement sécurisé ensuite<br><span style="font-size:0.9rem;">Activation sous 24h.</span>
@@ -1779,7 +1735,7 @@
                         <span class="config-badge-success"><i class="fas fa-lock"></i> 🔐 Vos données confidentielles</span>
                     </div>
                     <a href="https://config.devchatbotia.app/" class="btn-stripe" style="margin: 0;" target="_blank" rel="noopener">
-                        Démarrer mon essai gratuit <i class="fas fa-arrow-right"></i>
+                        Activer mon assistant IA — 14 jours gratuits <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
@@ -1840,7 +1796,7 @@
                 <h3>Ne laissez plus votre trafic immobilier repartir sans résultat</h3>
                 <p>Activez votre assistant IA immobilier et commencez à générer davantage de prospects qualifiés dès aujourd'hui.</p>
                 <a href="https://config.devchatbotia.app/" class="btn-stripe" style="padding: 20px 50px; font-size: 1.2rem;" target="_blank" rel="noopener">
-                    Essayer gratuitement 14 jours <i class="fas fa-arrow-right"></i>
+                    Activer mon assistant IA — 14 jours gratuits <i class="fas fa-arrow-right"></i>
                 </a>
                 <p style="margin-top:10px;font-size:0.9rem;color:var(--muted);">Activation sous 24h après validation</p>
                 <p style="margin-top: 25px; font-size: 0.95rem; color: var(--muted);">🔒 Paiement sécurisé ensuite · Sans engagement · Activation sous 24h</p>
@@ -1879,7 +1835,7 @@
 
     <div class="sticky-cta">
         <a href="https://config.devchatbotia.app/" class="btn-stripe" target="_blank" rel="noopener">
-           Essai gratuit 14 jours
+           Activer mon assistant IA — 14 jours gratuits
         </a>
     </div>
 
@@ -1888,7 +1844,7 @@
            class="btn-stripe"
            target="_blank"
            rel="noopener">
-           Essai gratuit 14 jours
+           Activer mon assistant IA — 14 jours gratuits
         </a>
     </div>
 
