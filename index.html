@@ -7,7 +7,7 @@
     <meta name="description" content="Assistant IA immobilier : convertissez vos visiteurs en prospects qualifiés 24h/24. Idéal pour agences, mandataires, annonces. 49€/mois sans engagement.">
     <link rel="canonical" href="https://immobilier.devchatbotia.app/">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="Assistant IA immobilier – DevChatbotIA®">
+    <meta property="og:title" content="Assistant IA immobilier — convertissez vos visiteurs en prospects qualifiés 24/7 | DevChatbotIA®">
     <meta property="og:description" content="Un assistant IA qui engage vos visiteurs et génère des prospects qualifiés pour vos mandats, 24h/24. 49€/mois sans engagement.">
     <meta property="og:url" content="https://immobilier.devchatbotia.app/">
     <meta property="og:type" content="website">
@@ -16,11 +16,11 @@
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://immobilier.devchatbotia.app/preview-immo.jpg">
-    <meta name="twitter:title" content="Assistant IA immobilier – DevChatbotIA®">
+    <meta name="twitter:title" content="Assistant IA immobilier — convertissez vos visiteurs en prospects qualifiés 24/7 | DevChatbotIA®">
     <meta name="twitter:description" content="Transformez votre trafic immobilier en prospects qualifiés 24/7 grâce à un assistant IA.">
     <meta property="og:site_name" content="DevChatbotIA®">
     <meta name="author" content="DevChatbotIA®">
-    <title>Assistant IA immobilier — transformez vos visiteurs en prospects qualifiés 24/7 | DevChatbotIA®</title>
+    <title>Assistant IA immobilier — convertissez vos visiteurs en prospects qualifiés 24/7 | DevChatbotIA®</title>
 
     <link rel="icon" href="data:,">
     <link rel="shortcut icon" href="data:,">
@@ -69,6 +69,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
+        /* [All existing CSS remains unchanged] */
         :root {
             --bg-primary: #ffffff;
             --bg-soft: #faf9f7;
@@ -1141,24 +1142,44 @@
             .config-option { padding: 12px 18px; font-size: 1rem; }
         }
 
+        /* MOBILE NAVBAR: vertical layout, full width, no horizontal scroll */
         @media (max-width: 768px) {
             .navbar {
-                overflow-x: auto;
-                -webkit-overflow-scrolling: touch;
-                white-space: nowrap;
                 display: block;
-                padding-left: 12px;
-                padding-right: 12px;
+                overflow-x: visible;
+                padding: 12px 16px;
             }
             .nav-links {
-                display: inline-flex;
-                flex-wrap: nowrap;
-                gap: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                width: 100%;
+                align-items: stretch;
+            }
+            .nav-links a {
+                display: block;
+                text-align: center;
+                padding: 10px 0;
+                background: var(--bg-soft);
+                border-radius: 40px;
+                border: 1px solid var(--border-light);
+                width: 100%;
+                font-size: 1rem;
+            }
+            .nav-links a.btn-secondary {
+                background: var(--accent-primary);
+                color: white;
+                border: none;
+            }
+            .navbar-wrapper {
+                position: relative;
+                top: 0;
+                background: white;
             }
             .card,
             .faq-item {
                 padding: 18px 16px;
-                margin: 12px;
+                margin: 12px 0;
             }
         }
 
@@ -1274,12 +1295,9 @@
                         <a href="https://config.devchatbotia.app/" class="btn-stripe" target="_blank" rel="noopener">
                            Essayer gratuitement 14 jours <i class="fas fa-arrow-right"></i>
                         </a>
-                        <p style="font-size:1rem; font-weight:500; margin-top:5px;">14 jours d’essai gratuit · sans carte bancaire · puis 49€/mois sans engagement</p>
+                        <p style="font-size:1rem; font-weight:500; margin-top:5px;">14 jours d’essai gratuit · Sans carte bancaire · Puis 49€/mois sans engagement</p>
                         <p style="font-size:0.9rem; color:var(--muted); margin-top:8px;">
-                            Sans carte bancaire · Activation sous 24h · Résiliation libre
-                        </p>
-                        <p style="font-size:0.9rem; color: var(--muted); margin-top:12px;">
-                            🔒 Paiement sécurisé Stripe · Activation rapide
+                            Activation sous 24h · Résiliation libre · Paiement sécurisé ensuite
                         </p>
                     </div>
                     <div class="micro-proof">
@@ -1612,7 +1630,7 @@
             <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:20px; max-width:700px; margin:auto;">
                 <div class="card" style="padding:30px 20px;">
                     <i class="fas fa-check-circle" style="font-size:1.5rem;color:var(--accent-primary);"></i>
-                    <p style="margin-top:10px;font-weight:600;">Activation rapide</p>
+                    <p style="margin-top:10px;font-weight:600;">Activation sous 24h</p>
                     <p style="font-size:0.95rem;color:var(--text-secondary);">Installation en quelques heures</p>
                 </div>
                 <div class="card" style="padding:30px 20px;">
@@ -1627,7 +1645,7 @@
                 </div>
                 <div class="card" style="padding:30px 20px;">
                     <i class="fas fa-check-circle" style="font-size:1.5rem;color:var(--accent-primary);"></i>
-                    <p style="margin-top:10px;font-weight:600;">Support disponible</p>
+                    <p style="margin-top:10px;font-weight:600;">Assistance personnalisée</p>
                     <p style="font-size:0.95rem;color:var(--text-secondary);">Une équipe à votre écoute</p>
                 </div>
             </div>
@@ -1653,13 +1671,13 @@
                         <li><i class="fas fa-check-circle"></i> Assistant IA disponible 24h/24, 7j/7</li>
                         <li><i class="fas fa-check-circle"></i> Capture et qualification automatique des visiteurs</li>
                         <li><i class="fas fa-check-circle"></i> Intégration sur votre site, pages de biens ou annonces</li>
-                        <li><i class="fas fa-check-circle"></i> Transmission des coordonnées par email ou CRM</li>
+                        <li><i class="fas fa-check-circle"></i> Transmission des coordonnées par email ou tableau de bord sécurisé</li>
                         <li><i class="fas fa-check-circle"></i> Tableau de bord pour suivre les conversations</li>
                         <li><i class="fas fa-check-circle"></i> Adaptation à votre secteur (vente, location, achat)</li>
                     </ul>
 
                     <div style="margin-top:30px; padding:20px; background:#faf9f7; border-radius:16px; border:1px solid var(--border-light);">
-                        <p style="font-weight:600; margin-bottom:10px;">Aucun risque.</p>
+                        <p style="font-weight:600; margin-bottom:10px;">Sans engagement.</p>
                         <p style="font-size:0.95rem;color:var(--text-secondary);line-height:1.6;">
                             ✔ activation sous 24h<br>
                             ✔ résiliation possible à tout moment<br>
@@ -1672,7 +1690,7 @@
                         Essayer gratuitement 14 jours <i class="fas fa-arrow-right"></i>
                     </a>
                     <p style="font-size:0.85rem; color: var(--muted); margin-top: 20px;">
-                        🔒 Paiement sécurisé Stripe<br><span style="font-size:0.9rem;">Activation en moins de 24h.</span>
+                        🔒 Paiement sécurisé ensuite<br><span style="font-size:0.9rem;">Activation sous 24h.</span>
                     </p>
                 </div>
             </div>
@@ -1796,6 +1814,10 @@
                     <h4>Est-ce conforme au RGPD ?</h4>
                     <p>Oui. Les données collectées sont sécurisées et utilisées uniquement pour le traitement des demandes. L'assistant peut être configuré selon vos obligations légales et vos politiques de confidentialité.</p>
                 </div>
+                <div class="faq-item">
+                    <h4>L’assistant remplace-t-il l’agent immobilier ?</h4>
+                    <p>Non. Il agit comme un assistant disponible 24h/24 pour accueillir, qualifier et préparer les demandes. Vous restez l’interlocuteur principal pour la relation commerciale et les visites.</p>
+                </div>
             </div>
 
             <div class="cta-section">
@@ -1804,8 +1826,8 @@
                 <a href="https://config.devchatbotia.app/" class="btn-stripe" style="padding: 20px 50px; font-size: 1.2rem;" target="_blank" rel="noopener">
                     Essayer gratuitement 14 jours <i class="fas fa-arrow-right"></i>
                 </a>
-                <p style="margin-top:10px;font-size:0.9rem;color:var(--muted);">Activation rapide — généralement le jour même</p>
-                <p style="margin-top: 25px; font-size: 0.95rem; color: var(--muted);">🔒 Paiement sécurisé Stripe · Sans engagement · Activation rapide</p>
+                <p style="margin-top:10px;font-size:0.9rem;color:var(--muted);">Activation sous 24h après validation</p>
+                <p style="margin-top: 25px; font-size: 0.95rem; color: var(--muted);">🔒 Paiement sécurisé ensuite · Sans engagement · Activation sous 24h</p>
             </div>
         </div>
     </section>
